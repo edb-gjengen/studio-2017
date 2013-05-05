@@ -1,0 +1,150 @@
+@import "settings"; // Global Foundation Settings
+
+@import "foundation/foundation-global"; // *always required
+@import "foundation/components/global"; // *always required
+@import "foundation/components/grid";
+// @import "foundation/components/visibility";
+@import "foundation/components/block-grid";
+@import "foundation/components/type";
+@import "foundation/components/buttons";
+@import "foundation/components/forms"; // *requires components/buttons
+// @import "foundation/components/custom-forms"; // *requires components/buttons, components/forms
+@import "foundation/components/button-groups"; // *requires components/buttons
+// @import "foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "foundation/components/split-buttons"; // *requires components/buttons
+@import "foundation/components/flex-video";
+// @import "foundation/components/section";
+// @import "foundation/components/top-bar";  // *requires components/grid
+@import "foundation/components/orbit";
+@import "foundation/components/reveal";
+// @import "foundation/components/joyride";
+// @import "foundation/components/clearing";
+// @import "foundation/components/alert-boxes";
+// @import "foundation/components/breadcrumbs";
+// @import "foundation/components/keystrokes";
+@import "foundation/components/labels";
+// @import "foundation/components/inline-lists";
+@import "foundation/components/pagination";
+// @import "foundation/components/panels";
+// @import "foundation/components/pricing-tables";
+// @import "foundation/components/progress-bars";
+// @import "foundation/components/side-nav";
+// @import "foundation/components/sub-nav";
+// @import "foundation/components/switch";
+// @import "foundation/components/magellan";
+@import "foundation/components/tables";
+// @import "foundation/components/thumbs";
+// @import "foundation/components/tooltips";
+// @import "foundation/components/dropdown";
+
+@import "compass/typography/lists/inline-block-list";
+
+header.header {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    .date {
+        color: $primary-color;
+        font-size: 3.4em;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: inline-block;
+
+    }
+    .logo img {
+        position: relative;
+        bottom: -15px;
+        left: 10px;
+
+    }
+    .nav-menu {
+        @include inline-block-list;
+        margin: 0 auto;
+        background-color: $primary-color;
+
+        a {
+            font-size: 1.6em;
+            display: inline-block;
+            padding: .45em;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+}
+.highlight {
+    a {
+        height: 280px;
+        line-height: 1.1;
+        font-size: 2.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        color: white;
+        background-color: $secondary-color;
+
+        span {
+            display: inline-block;
+            padding-top: 30px;
+            &.larger {
+                padding-top: 55px;
+                font-size: 1.6em;
+            }
+        }
+        .number {
+            font-size: 3em;
+
+        }
+    }
+}
+.separator {
+    height: 2px;
+    background-color: $secondary-color;
+    margin: 2em 0;
+}
+.article-header {
+    h1 a {
+        color: inherit;
+    }
+}
+.footer {
+    min-width: 100%;
+    text-align: center;
+    height: 500px;
+    background-color: $primary-color;
+    #inner-footer {
+        img {
+            margin-top: 200px;
+        }
+    }
+}
+.flying-megawhale {
+    width: 719px;
+    height: 582px;
+    background-image: url("../images/megawhale.png");
+    background-size: 719px 582px;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 4em;
+    position: relative;
+    top: 50px;
+    z-index: -1;
+}
+.wave {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:30px;
+    width:100%;
+    background-color: $primary-color;
+
+    .wavetop {
+        position: relative;
+        bottom: 12px;
+        height: 12px;
+        background-image: url("../images/wave_top.png");
+        background-size: 48px 12px;
+        background-repeat: repeat-x;
+        width:100%;
+    }
+}

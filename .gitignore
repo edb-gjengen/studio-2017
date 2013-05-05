@@ -1,3 +1,4 @@
 *.swp
 *~
-wp-settings.php
+wp-config.php
+.sass-cache
