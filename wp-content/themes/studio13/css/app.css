@@ -516,14 +516,19 @@ table tr th, table tr td { padding: 0.5625em 0.625em; font-size: 0.875em; color:
 table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #f9f9f9; }
 table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.125em; }
 
+body a { -webkit-transition: background-color 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, color 0.15s ease; }
+body a:hover { color: #ff005c; }
+
 header.header { margin-top: 2em; margin-bottom: 2em; }
 header.header .date { color: #007aff; font-size: 3.4em; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; display: inline-block; }
 header.header .logo img { position: relative; bottom: -15px; left: 10px; }
 header.header .nav-menu { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; margin: 0 auto; background-color: #007aff; }
 header.header .nav-menu li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; white-space: nowrap; }
 header.header .nav-menu a { font-size: 1.6em; display: inline-block; padding: .45em; color: white; text-transform: uppercase; }
+header.header .nav-menu a:hover { background-color: #ff005c; }
 
 .highlight a { height: 280px; line-height: 1.1; font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; display: block; color: white; background-color: #ff005c; }
+.highlight a:hover { color: white; background-color: #007aff; }
 .highlight a span { display: inline-block; padding-top: 30px; }
 .highlight a span.larger { padding-top: 55px; font-size: 1.6em; }
 .highlight a .number { font-size: 3em; }
@@ -531,11 +536,14 @@ header.header .nav-menu a { font-size: 1.6em; display: inline-block; padding: .4
 .separator { height: 2px; background-color: #ff005c; margin: 2em 0; }
 
 .article-header h1 a { color: inherit; }
+.article-header h1 a:hover { color: #007aff; }
 
-.footer { min-width: 100%; text-align: center; height: 500px; background-color: #007aff; }
-.footer #inner-footer img { margin-top: 200px; }
+.footer { min-width: 100%; text-align: center; height: 400px; background-color: #007aff; }
+.footer #inner-footer img { margin-top: 100px; }
 
-.flying-megawhale { width: 719px; height: 582px; background-image: url("../images/megawhale.png"); background-size: 719px 582px; background-repeat: no-repeat; margin: auto; margin-top: 4em; position: relative; top: 50px; z-index: -1; }
+.flying-megawhale { width: 719px; height: 582px; background-image: url("../images/megawhale.png"); background-size: 100% 100%; background-repeat: no-repeat; margin: auto; margin-top: 4em; position: relative; top: 50px; z-index: -1; }
 
 .wave { position: fixed; left: 0px; bottom: 0px; height: 30px; width: 100%; background-color: #007aff; }
 .wave .wavetop { position: relative; bottom: 12px; height: 12px; background-image: url("../images/wave_top.png"); background-size: 48px 12px; background-repeat: repeat-x; width: 100%; }
+
+.row { /* FIXME: responsive */ width: 1000px; max-width: 1000px; }
