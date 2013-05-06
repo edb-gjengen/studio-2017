@@ -177,6 +177,8 @@ header.header {
     }
 }
 article {
+    margin-bottom: 1em;
+
     .article-header {
         h1 a {
             color: inherit;
@@ -288,15 +290,15 @@ article {
     width:100%;
     background-color: $primary-color;
 
-    .wavetop {
-        position: relative;
-        bottom: 12px;
-        height: 12px;
-        background-image: url("../images/wave_top.png");
-        background-size: 48px 12px;
-        background-repeat: repeat-x;
-        width:100%;
-    }
+}
+.wavetop {
+    position: relative;
+    bottom: 12px;
+    height: 12px;
+    background-image: url("../images/wave_top.png");
+    background-size: 48px 12px;
+    background-repeat: repeat-x;
+    width:100%;
 }
 .row {
     /* FIXME: responsive */

@@ -23,7 +23,6 @@
                 <?php if (is_sticky($post->ID)): ?>
                     <?php get_template_part( 'content', 'sticky' ); ?>
                 <?php else:  ?>
-                <!-- FIXME:  -->
                     <?php get_template_part( 'content' ); ?>
                 <?php endif; ?>
             <?php endwhile; ?>
