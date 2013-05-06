@@ -179,6 +179,10 @@ header.header {
 article {
     margin-bottom: 1em;
 
+    p {
+        margin-bottom: 0.6em;
+    }
+
     .article-header {
         h1 a {
             color: inherit;

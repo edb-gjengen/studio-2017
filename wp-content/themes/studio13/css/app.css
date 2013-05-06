@@ -549,6 +549,7 @@ header.header .nav-menu a:hover { background-color: #ff005c; }
 .separator.tiny-margin { margin-top: 0; margin-bottom: 0.4em; }
 
 article { margin-bottom: 1em; }
+article p { margin-bottom: 0.6em; }
 article .article-header h1 a { color: inherit; }
 article .article-header h1 a:hover { color: #007aff; }
 article .article-header h4 a { color: #ff005c; }
