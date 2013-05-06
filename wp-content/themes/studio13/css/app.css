@@ -561,7 +561,7 @@ article .article-footer { text-align: right; margin-bottom: 2em; }
 
 .bluebordered { border-left: 2px solid #007aff; }
 
-.row.row.tweets-and-blog { margin-bottom: 2em; }
+.row.row.tweets-and-blog { margin-top: 2em; margin-bottom: 3em; }
 
 .social-media { font-size: 2em; color: #ff005c; }
 .social-media img, .social-media i { padding-left: 1em; }
