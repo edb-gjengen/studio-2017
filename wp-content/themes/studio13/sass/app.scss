@@ -40,8 +40,16 @@
 @import "compass/typography/lists/inline-block-list";
 @import "compass/css3/transform";
 @import "compass/css3/transition";
+@import "compass/css3/box-shadow";
 
+/* General styles */
 body {
+    h1,h2,h3,h4 {
+        text-transform: uppercase;
+    }
+    h1 {
+        margin-bottom: 0.3em;
+    }
     a {
         @include transition(
             background-color .15s ease,
@@ -51,15 +59,55 @@ body {
             color: $secondary-color;
         }
     }
+    
 }
+/* buttons */
+body {
+    .button {
+        border: 0;
+        @extend .secondary;
+        @include box-shadow(none);
+        text-transform: uppercase;
+    }
+    .btn-tiny {
+        $size: 32px;
+        text-align: center;
+        font-size: 1.3em;
+        display: inline-block;
+        color: white;
+        width: $size;
+        height: $size;
+        line-height: $size;
+        .icon-twitter {
+            font-size: 0.7em;
+        }
+    }
+    .primary {
+        background-color: $primary-color;
+
+        &:hover {
+            color: white;
+            background-color: $secondary-color;
+        }
+    }
+    .secondary {
+        background-color: $secondary-color;
+
+        &:hover {
+            color: white;
+            background-color: $primary-color;
+        }
+    }
+}
+
 header.header {
     margin-top: 2em;
     margin-bottom: 2em;
     .date {
         color: $primary-color;
-        font-size: 3.4em;
+        font-size: 3.45em;
         text-transform: uppercase;
-        font-weight: bold;
+        font-weight: 600;
         margin-bottom: 10px;
         display: inline-block;
 
@@ -76,9 +124,10 @@ header.header {
         background-color: $primary-color;
 
         a {
-            font-size: 1.6em;
+            font-size: 1.5em;
+            font-weight: 600;
             display: inline-block;
-            padding: .45em;
+            padding: .7em .8em;
             color: white;
             text-transform: uppercase;
 
@@ -122,15 +171,91 @@ header.header {
     height: 2px;
     background-color: $secondary-color;
     margin: 2em 0;
+    &.tiny-margin {
+        margin-top: 0;
+        margin-bottom: 0.4em;
+    }
 }
-.article-header {
-    h1 a {
-        color: inherit;
+article {
+    .article-header {
+        h1 a {
+            color: inherit;
 
-        &:hover {
-            color: $primary-color;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        h4 a {
+            color: $secondary-color;
+            &:hover { color: $primary-color; }
         }
     }
+    .entry-content {
+        font-size: 0.9em;
+    }
+    
+    .article-footer {
+        text-align: right;
+        margin-bottom: 2em;
+    }
+}
+.moretag {
+    font-weight: bold;
+}
+.bluebordered {
+    border-left: 2px solid $primary-color;
+}
+.row.row.tweets-and-blog {
+    margin-bottom: 2em;
+}
+.social-media {
+    font-size: 2em;
+    color: $secondary-color;
+
+    img, i {
+        padding-left: 1em;
+    }
+    i {
+        font-size: 1.5em;
+        color: $primary-color;
+    }
+    .uppercase {
+        text-transform: uppercase;
+    }
+}
+.sidebar {
+    .lineup {
+        ul.artists {
+            list-style-type: none;
+            padding-left: 0;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            font-weight: bold;
+            line-height: 1.2;
+
+            a {
+                color: $primary-color;
+                &:hover {
+                    color: white;
+                    background-color: $secondary-color;
+                }
+            }
+
+            &.headliners {
+                margin-top: 1em;
+                font-size: 2em;
+
+                li:nth-child(even) a {
+                    color: $secondary-color;
+                    &:hover {
+                        color: white;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
 }
 .footer {
     min-width: 100%;

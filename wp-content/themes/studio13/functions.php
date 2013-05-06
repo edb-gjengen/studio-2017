@@ -35,4 +35,15 @@ function prefix_remove_menu_item_whitespace( $html_content ) {
 }
 add_filter( 'wp_nav_menu_hoved_items', 'prefix_remove_menu_item_whitespace' );
 
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+function new_excerpt_more($more) {
+    global $post;
+    return '... <a class="moretag" href="'. get_permalink($post->ID) . '">les mer</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 ?>

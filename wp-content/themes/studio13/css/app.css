@@ -300,9 +300,9 @@ blockquote, blockquote p { line-height: 1.6; color: #ff99be; }
 button, .button { border-style: solid; border-width: 1px; cursor: pointer; font-family: inherit; font-weight: bold; line-height: 1; margin: 0 0 1.25em; position: relative; text-decoration: none; text-align: center; display: inline-block; padding-top: 0.75em; padding-right: 1.5em; padding-bottom: 0.8125em; padding-left: 1.5em; font-size: 1em; background-color: #007aff; border-color: #0062cc; color: white; }
 button:hover, button:focus, .button:hover, .button:focus { background-color: #0062cc; }
 button:hover, button:focus, .button:hover, .button:focus { color: white; }
-button.secondary, .button.secondary { background-color: #ff005c; border-color: #cc004a; color: white; }
-button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus { background-color: #cc004a; }
-button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus { color: white; }
+button.secondary, body button.button, .button.secondary, body .button { background-color: #ff005c; border-color: #cc004a; color: white; }
+button.secondary:hover, body button.button:hover, button.secondary:focus, body button.button:focus, .button.secondary:hover, body .button:hover, .button.secondary:focus, body .button:focus { background-color: #cc004a; }
+button.secondary:hover, body button.button:hover, button.secondary:focus, body button.button:focus, .button.secondary:hover, body .button:hover, .button.secondary:focus, body .button:focus { color: white; }
 button.success, .button.success { background-color: #5da423; border-color: #457a1a; color: white; }
 button.success:hover, button.success:focus, .button.success:hover, .button.success:focus { background-color: #457a1a; }
 button.success:hover, button.success:focus, .button.success:hover, .button.success:focus { color: white; }
@@ -319,10 +319,10 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] { backgro
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus { background-color: #0062cc; }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus { color: white; }
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus { background-color: #007aff; }
-button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary { background-color: #ff005c; border-color: #cc004a; color: white; cursor: default; opacity: 0.6; -webkit-box-shadow: none; box-shadow: none; }
-button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus { background-color: #cc004a; }
-button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus { color: white; }
-button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus { background-color: #ff005c; }
+button.disabled.secondary, body button.disabled.button, button[disabled].secondary, body button[disabled].button, .button.disabled.secondary, body .button.disabled, .button[disabled].secondary, body .button[disabled] { background-color: #ff005c; border-color: #cc004a; color: white; cursor: default; opacity: 0.6; -webkit-box-shadow: none; box-shadow: none; }
+button.disabled.secondary:hover, body button.disabled.button:hover, button.disabled.secondary:focus, body button.disabled.button:focus, button[disabled].secondary:hover, body button[disabled].button:hover, button[disabled].secondary:focus, body button[disabled].button:focus, .button.disabled.secondary:hover, body .button.disabled:hover, .button.disabled.secondary:focus, body .button.disabled:focus, .button[disabled].secondary:hover, body .button[disabled]:hover, .button[disabled].secondary:focus, body .button[disabled]:focus { background-color: #cc004a; }
+button.disabled.secondary:hover, body button.disabled.button:hover, button.disabled.secondary:focus, body button.disabled.button:focus, button[disabled].secondary:hover, body button[disabled].button:hover, button[disabled].secondary:focus, body button[disabled].button:focus, .button.disabled.secondary:hover, body .button.disabled:hover, .button.disabled.secondary:focus, body .button.disabled:focus, .button[disabled].secondary:hover, body .button[disabled]:hover, .button[disabled].secondary:focus, body .button[disabled]:focus { color: white; }
+button.disabled.secondary:hover, body button.disabled.button:hover, button.disabled.secondary:focus, body button.disabled.button:focus, button[disabled].secondary:hover, body button[disabled].button:hover, button[disabled].secondary:focus, body button[disabled].button:focus, .button.disabled.secondary:hover, body .button.disabled:hover, .button.disabled.secondary:focus, body .button.disabled:focus, .button[disabled].secondary:hover, body .button[disabled]:hover, .button[disabled].secondary:focus, body .button[disabled]:focus { background-color: #ff005c; }
 button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success { background-color: #5da423; border-color: #457a1a; color: white; cursor: default; opacity: 0.6; -webkit-box-shadow: none; box-shadow: none; }
 button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus { background-color: #457a1a; }
 button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus { color: white; }
@@ -493,7 +493,7 @@ fieldset legend { font-weight: bold; background: white; padding: 0 0.1875em; mar
 .label.round { -webkit-border-radius: 1000px; border-radius: 1000px; }
 .label.alert { background-color: #c60f13; color: #fff; }
 .label.success { background-color: #5da423; color: #fff; }
-.label.secondary { background-color: #ff005c; color: #fff; }
+.label.secondary, body .label.button { background-color: #ff005c; color: #fff; }
 
 /* Pagination */
 .pagination { display: block; height: 1.5em; margin-left: -0.3125em; }
@@ -516,15 +516,27 @@ table tr th, table tr td { padding: 0.5625em 0.625em; font-size: 0.875em; color:
 table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #f9f9f9; }
 table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.125em; }
 
+/* General styles */
+body h1, body h2, body h3, body h4 { text-transform: uppercase; }
+body h1 { margin-bottom: 0.3em; }
 body a { -webkit-transition: background-color 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, color 0.15s ease; }
 body a:hover { color: #ff005c; }
 
+/* buttons */
+body .button { border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; text-transform: uppercase; }
+body .btn-tiny { text-align: center; font-size: 1.3em; display: inline-block; color: white; width: 32px; height: 32px; line-height: 32px; }
+body .btn-tiny .icon-twitter { font-size: 0.7em; }
+body .primary { background-color: #007aff; }
+body .primary:hover { color: white; background-color: #ff005c; }
+body .secondary, body .button { background-color: #ff005c; }
+body .secondary:hover, body .button:hover { color: white; background-color: #007aff; }
+
 header.header { margin-top: 2em; margin-bottom: 2em; }
-header.header .date { color: #007aff; font-size: 3.4em; text-transform: uppercase; font-weight: bold; margin-bottom: 10px; display: inline-block; }
+header.header .date { color: #007aff; font-size: 3.45em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: inline-block; }
 header.header .logo img { position: relative; bottom: -15px; left: 10px; }
 header.header .nav-menu { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; margin: 0 auto; background-color: #007aff; }
 header.header .nav-menu li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; white-space: nowrap; }
-header.header .nav-menu a { font-size: 1.6em; display: inline-block; padding: .45em; color: white; text-transform: uppercase; }
+header.header .nav-menu a { font-size: 1.5em; font-weight: 600; display: inline-block; padding: .7em .8em; color: white; text-transform: uppercase; }
 header.header .nav-menu a:hover { background-color: #ff005c; }
 
 .highlight a { height: 280px; line-height: 1.1; font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; display: block; color: white; background-color: #ff005c; }
@@ -534,9 +546,32 @@ header.header .nav-menu a:hover { background-color: #ff005c; }
 .highlight a .number { font-size: 3em; }
 
 .separator { height: 2px; background-color: #ff005c; margin: 2em 0; }
+.separator.tiny-margin { margin-top: 0; margin-bottom: 0.4em; }
 
-.article-header h1 a { color: inherit; }
-.article-header h1 a:hover { color: #007aff; }
+article .article-header h1 a { color: inherit; }
+article .article-header h1 a:hover { color: #007aff; }
+article .article-header h4 a { color: #ff005c; }
+article .article-header h4 a:hover { color: #007aff; }
+article .entry-content { font-size: 0.9em; }
+article .article-footer { text-align: right; margin-bottom: 2em; }
+
+.moretag { font-weight: bold; }
+
+.bluebordered { border-left: 2px solid #007aff; }
+
+.row.row.tweets-and-blog { margin-bottom: 2em; }
+
+.social-media { font-size: 2em; color: #ff005c; }
+.social-media img, .social-media i { padding-left: 1em; }
+.social-media i { font-size: 1.5em; color: #007aff; }
+.social-media .uppercase { text-transform: uppercase; }
+
+.sidebar .lineup ul.artists { list-style-type: none; padding-left: 0; text-transform: uppercase; font-size: 1.2em; font-weight: bold; line-height: 1.2; }
+.sidebar .lineup ul.artists a { color: #007aff; }
+.sidebar .lineup ul.artists a:hover { color: white; background-color: #ff005c; }
+.sidebar .lineup ul.artists.headliners { margin-top: 1em; font-size: 2em; }
+.sidebar .lineup ul.artists.headliners li:nth-child(even) a { color: #ff005c; }
+.sidebar .lineup ul.artists.headliners li:nth-child(even) a:hover { color: white; background-color: #007aff; }
 
 .footer { min-width: 100%; text-align: center; height: 400px; background-color: #007aff; }
 .footer #inner-footer img { margin-top: 100px; }

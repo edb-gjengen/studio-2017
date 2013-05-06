@@ -1,20 +1,9 @@
 <?php get_header(); ?>
 <div id="content">
-    <div id="inner-content">
-        <div id="main" role="main">
+    <div id="inner-content" class="row">
+        <div id="main" role="main" class="small-8 columns">
             <?php while (have_posts()) : the_post(); ?>
-
-            <article id="post-<?php the_ID(); ?>" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-                <header class="article-header">
-                    <h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-                </header> <!-- end article header -->
-                <section class="entry-content" itemprop="articleBody">
-                    innhold:"<?php the_content(); ?>"
-                </section> <!-- end article section -->
-                <footer class="article-footer">
-                    nederst på siden
-                </footer> <!-- end article footer -->
-            </article> <!-- end article -->
+                    <?php get_template_part( 'content', 'full' ); ?>
             <?php endwhile; ?>
         </div> <!-- end #main -->
         <?php get_sidebar(); ?>

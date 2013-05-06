@@ -25,7 +25,8 @@
         <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         <!-- Stylesheets -->
-        <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
         <link href="<?php echo get_template_directory_uri(); ?>/css/normalize.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
         <link href="<?php echo get_template_directory_uri(); ?>/css/app.css" media="screen, projector, print" rel="stylesheet" type="text/css" />
 

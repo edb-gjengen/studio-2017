@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="content">
-    <div id="inner-content">
-        <div id="main" class="first" role="main">
+    <div id="inner-content" class="row">
+        <div id="main" class="small-12 columns" role="main">
             <article id="post-not-found" class="hentry">
                 <header class="article-header">
                     <h1>Trist 404-side</h1>
@@ -10,7 +10,7 @@
                     <p>ånei og ånei</p>
                 </section> <!-- end article section -->
                 <section class="search">
-                        <p>La brukeren få søke litt istedet <?php get_search_form(); ?></p>
+                        <p>Du kan søke litt istedet <?php get_search_form(); ?></p>
                 </section> <!-- end search section -->
                 <footer class="article-footer">
                         <p></p>
