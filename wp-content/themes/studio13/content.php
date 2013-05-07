@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" role="article">
     <div class="row">
         <div class="small-6 columns">
-            <?php the_post_thumbnail(); ?>
+            <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a>
         </div>
         <div class="small-6 columns">
             <header class="article-header">
