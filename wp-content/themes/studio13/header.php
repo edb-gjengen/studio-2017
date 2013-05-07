@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <!-- Google Chrome Frame for IE -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php wp_title(''); ?></title>
+        <title><?php wp_title(' '); ?><?php bloginfo('name'); ?></title>
         <!-- mobile meta (hooray!) -->
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
