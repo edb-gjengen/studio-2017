@@ -41,6 +41,9 @@
 @import "compass/css3/transform";
 @import "compass/css3/transition";
 @import "compass/css3/box-shadow";
+@import "compass/css3/filter";
+
+$multiplied: #00005c; // FIXME:  use this instead of transparent water?
 
 /* General styles */
 body {
@@ -60,6 +63,11 @@ body {
         }
     }
     
+}
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 /* buttons */
 body {
@@ -99,10 +107,38 @@ body {
         }
     }
 }
+/* Image hover filters */
+a.filter {
+	position: relative;
+	float: left;
+	cursor: pointer;
+    background-color: white;
+    &:hover {
+        @include filter(none);
+        background-color: white;
+    }
+    @include filter(grayscale(100%));
+    //&:before {
+    //    content: "";
+    //    display: block;
+    //    position: absolute;
+    //    top: 0;
+    //    bottom: 0;
+    //    left: 0;
+    //    right: 0;
+    //    background-color: transparent;
+    //}
+    //&:hover:before {
+    //    background-color: $primary-color;
+    //    opacity: .8;
+    //    @include transition( any .15s ease);
+    //}
+}
 
 header.header {
     margin-top: 2em;
     margin-bottom: 2em;
+
     .date {
         color: $primary-color;
         font-size: 3.45em;
@@ -117,6 +153,13 @@ header.header {
         bottom: -15px;
         left: 10px;
 
+        &.multiply {
+            position: absolute;
+            left: 372px;
+            bottom: -12px;
+            z-index: 1;
+
+        }
     }
     .nav-menu {
         @include inline-block-list;
@@ -127,11 +170,13 @@ header.header {
             font-size: 1.5em;
             font-weight: 600;
             display: inline-block;
-            padding: .7em .8em;
+            padding: .7em .813em;
             color: white;
             text-transform: uppercase;
+            position: relative;
 
             &:hover {
+                z-index: 2;
                 background-color: $secondary-color;
             }
         }
@@ -149,6 +194,17 @@ header.header {
         color: white;
         background-color: $secondary-color;
 
+        &.highlight-image {
+            @extend .hide-text;
+            background-color: white;
+            background-image: url('../images/fri_villig.png');
+            background-repeat: no-repeat;
+
+            &:hover {
+                background-color: white;
+                background-image: url('../images/fri_villig_hover.png');
+            }
+        }
         &:hover {
             color: white;
             background-color: $primary-color;
@@ -157,7 +213,7 @@ header.header {
             display: inline-block;
             padding-top: 30px;
             &.larger {
-                padding-top: 55px;
+                padding-top: 62px;
                 font-size: 1.6em;
             }
         }
@@ -212,8 +268,63 @@ article {
     border-left: 2px solid $primary-color;
 }
 .row.row.tweets-and-blog {
-    margin-top: 2em;
     margin-bottom: 3em;
+}
+.tweets-image {
+    @extend .hide-text;
+    display: inline-block;
+    width: 291px;
+    height: 114px;
+    background-color: white;
+    background-image: url('../images/tweets.png');
+    background-repeat: no-repeat;
+
+    &:hover {
+        background-color: white;
+        background-image: url('../images/tweets_hover.png');
+    }
+}
+.blog-image {
+    @extend .hide-text;
+    display: inline-block;
+    width: 285px;
+    height: 258px;
+    background-color: white;
+    background-image: url('../images/blog.png');
+    background-repeat: no-repeat;
+
+    &:hover {
+        background-color: white;
+        background-image: url('../images/blog_hover.png');
+    }
+}
+.instagram-image {
+    @extend .hide-text;
+    display: inline-block;
+    width: 300px;
+    height: 304px;
+    background-color: white;
+    background-image: url('../images/instagram.png');
+    background-repeat: no-repeat;
+
+    &:hover {
+        background-color: white;
+        background-image: url('../images/instagram_hover.png');
+    }
+}
+.artists-image {
+    @extend .hide-text;
+    display: inline-block;
+    width: 300px;
+    height: 220px;
+    background-color: white;
+    background-image: url('../images/artists.png');
+    background-repeat: no-repeat;
+
+    &:hover {
+        background-color: white;
+        background-image: url('../images/artists_hover.png');
+    }
 }
 .social-media {
     font-size: 2em;
@@ -294,7 +405,6 @@ article {
     height:30px;
     width:100%;
     background-color: $primary-color;
-
 }
 .wavetop {
     position: relative;

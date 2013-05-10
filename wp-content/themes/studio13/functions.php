@@ -10,18 +10,25 @@ register_nav_menu( 'footer', 'Footermeny' );
 
 add_theme_support( 'post-thumbnails' );
 
-/* TODO: Add these js thingies:
-    	<script src="javascripts/foundation/foundation.joyride.js"></script>
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'javascripts/vendor/zepto' : 'javascripts/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-<script>
-    $(document).foundation();
-  </script>
+add_image_size( 'eight-columns', 650, 500, true );
+add_image_size( 'four-columns', 310, 160, true );
 
-   */
+
+function studio_enqueue_scripts() {
+	// script location, dependencies and version
+	wp_register_script( 'foundation', get_template_directory_uri().'/js/foundation/foundation.js', array('jquery') );
+	wp_register_script( 'foundation-joyride', get_template_directory_uri().'/js/foundation/foundation.joyride.js', array('foundation') );
+	wp_register_script( 'instafeed', get_template_directory_uri().'/js/vendor/instafeed.min.js' );
+	wp_register_script( 'moment', get_template_directory_uri().'/js/vendor/moment.min.js' );
+	wp_register_script( 'skrollr', get_template_directory_uri().'/js/vendor/skrollr.min.js' );
+	wp_register_script( 'skrollr-stylesheets', get_template_directory_uri().'/js/vendor/skrollr.stylesheets.min.js' );
+	wp_register_script( 'application', get_template_directory_uri().'/js/main.js', array('instafeed', 'foundation-joyride', 'moment', 'skrollr', 'skrollr-stylesheets') );
+
+    // enqueue them
+	wp_enqueue_script( 'application' );
+}
+add_action( 'wp_enqueue_scripts' , 'studio_enqueue_scripts' );
+
 /* Modify the output of list items in the header navigation menu.
  *
  * Remove the whitespace between HTML tags. Required specifically for better

@@ -3,8 +3,8 @@
     <div class="highlight small-4 columns">
         <a href="#"><span><div class="number">100</div>dager igjen</span></a>
     </div>
-    <div class="small-4 columns text-center">
-        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/fri_villig.png" class="highlight higlight-image" alt="Frivillig Studio 2013" /></a>
+    <div class="highlight small-4 columns text-center">
+        <a href="#" class="highlight-image">Bli Frivillig</a>
     </div>
     <div class="highlight small-4 columns">
         <a href="#"><span class="larger">Kjøp billett</span></a>
@@ -33,26 +33,21 @@
                 </div>
                 <div class="row tweets-and-blog">
                     <div class="small-6 columns">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/studiotweets.png" alt="Tweets om STUDiO" /></a>
-                        <div class="twitter-feed"></div>
+                        <a href="#" class="tweets-image">Tweets tagget med #studiofestivalen</a>
+                        <ul class="twitter-feed"></ul>
                     </div>
                     <div class="bluebordered text-center small-6 columns">
-                        <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/follow_bloggers.png" class="highlight higlight-image" alt="Frivillig Studio 2013" /></a>
+                        <a href="#" class="blog-image">Blogg</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="small-12 columns">
                         <div class="instagram-feed">
-                             <ul class="small-block-grid-2">
-                                <li><h1>Instagram</h1><h4>#Studiofestivalen</h4></li>
-                                <li><img src="http://placekitten.com/330/330/"></li>
-                            </ul> 
-                             <ul class="small-block-grid-4">
-                                <li><img src="http://placekitten.com/200/200/"></li>
-                                <li><img src="http://placekitten.com/200/200/"></li>
-                                <li><img src="http://placekitten.com/200/200/"></li>
-                                <li><img src="http://placekitten.com/200/200/"></li>
-                            </ul> 
+                             <ul class="small-block-grid-2 first">
+                                <li><a href="http://instagram.com/studiofestivalen/" class="instagram-image">Instagram #studiofestivalen</a></li>
+                            </ul>
+                             <ul class="small-block-grid-4 rest">
+                            </ul>
                         </div>
                     </div>
                 </div>

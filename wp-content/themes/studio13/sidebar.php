@@ -5,7 +5,7 @@
         <!-- This content shows up if there are no widgets defined in the backend. -->
         <!-- FIXME: template-tag -->
         <div class="lineup">
-            <a href="/artister/"><img src="<?php echo get_template_directory_uri(); ?>/images/artister.png" alt="Artister" /></a>
+            <a href="/artister/" class="artists-image">Artister</a>
             <ul class="artists headliners">
                 <li><a href="">obama</a></li>
                 <li><a href="">THE ETTES</a></li>
