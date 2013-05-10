@@ -12,6 +12,7 @@ add_theme_support( 'post-thumbnails' );
 
 add_image_size( 'eight-columns', 650, 500, true );
 add_image_size( 'four-columns', 310, 160, true );
+add_image_size( 'artist-thumb', 310, 260, true );
 
 
 function studio_enqueue_scripts() {
