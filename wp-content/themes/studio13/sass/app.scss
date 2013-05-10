@@ -441,6 +441,9 @@ article {
 }
 /* Template styles */
 .template-artists {
+    img {
+        display: block;
+    }
 
     .artists {
         font-size: 1.5em;
@@ -452,7 +455,10 @@ article {
                 color: $primary-color;
                 &:hover {
                     color: white;
-                    background-color: $secondary-color;
+                    span {
+                        display: block;
+                        background-color: $secondary-color;
+                    }
                 }
             }
 
