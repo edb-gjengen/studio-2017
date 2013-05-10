@@ -614,3 +614,6 @@ article .article-footer { text-align: right; margin-bottom: 2em; }
 .wavetop { position: relative; bottom: 12px; height: 12px; background-image: url("../images/wave_top.png"); background-size: 48px 12px; background-repeat: repeat-x; width: 100%; }
 
 .row { /* FIXME: responsive */ width: 1000px; max-width: 1000px; }
+
+/* Template styles */
+.template-artists .artists { font-size: 1.5em; text-transform: uppercase; }

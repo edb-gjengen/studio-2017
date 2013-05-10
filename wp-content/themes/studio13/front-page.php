@@ -39,7 +39,9 @@
                 <div class="row tweets-and-blog">
                     <div class="small-6 columns">
                         <a href="http://twitter.com/studiofestival" class="tweets-image">Tweets tagget med #studiofestivalen</a>
-                        <ul class="twitter-feed"></ul>
+                        <a class="twitter-timeline" href="https://twitter.com/studiofestival" data-widget-id="332811736338022400" data-tweet-limit="1" data-border-color="#ffffff" data-chrome="nofooter transparent noheader noscrollbar noborders">Tweets by @studiofestival</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
                     </div>
                     <div class="bluebordered text-center small-6 columns">
                         <a href="/blogg" class="blog-image">Blogg</a>
