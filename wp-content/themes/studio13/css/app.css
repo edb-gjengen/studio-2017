@@ -565,12 +565,12 @@ a.colored:hover img { opacity: .4; }
 .disco.reversed { -webkit-animation: disco 0.5s 0.5s infinite alternate; -moz-animation: disco 0.5s 0.5s infinite alternate; -o-animation: disco 0.5s 0.5s infinite alternate; animation: disco 0.5s 0.5s infinite alternate; }
 
 header.header { margin-top: 2em; margin-bottom: 2em; }
-header.header .date { color: #007aff; font-size: 3.44em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: inline-block; }
+header.header .date { color: #007aff; font-size: 3.4em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: inline-block; }
 header.header .logo img { position: relative; bottom: -15px; left: 10px; }
 header.header .logo img.multiply { position: absolute; left: 372px; bottom: -12px; z-index: 1; }
-header.header .nav-menu { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; margin: 0 auto; background-color: #007aff; }
+header.header .nav-menu { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; margin: 0 auto; }
 header.header .nav-menu li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; white-space: nowrap; }
-header.header .nav-menu a { font-size: 1.5em; font-weight: 600; display: inline-block; padding: .7em .812em; color: white; text-transform: uppercase; position: relative; }
+header.header .nav-menu a { background-color: #007aff; font-size: 1.5em; font-weight: 600; display: inline-block; padding: .7em .805em; color: white; text-transform: uppercase; position: relative; }
 header.header .nav-menu a:hover { z-index: 2; background-color: #ff005c; }
 
 .highlight a { height: 280px; line-height: 1.1; font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; display: block; color: white; background-color: #ff005c; }
@@ -584,20 +584,20 @@ header.header .nav-menu a:hover { z-index: 2; background-color: #ff005c; }
 .separator { height: 2px; background-color: #ff005c; margin: 2em 0; }
 .separator.tiny-margin { margin-top: 0; margin-bottom: 0.4em; }
 
-article { margin-bottom: 1em; }
+article { margin-bottom: 1.5em; }
 article p { margin-bottom: 0.6em; }
 article .article-header h1 a { color: #ff005c; background-color: white; }
 article .article-header h1 a:hover { color: #007aff; }
 article .article-header h4 a { color: #ff005c; background-color: white; }
 article .article-header h4 a:hover { color: #007aff; }
 article .entry-content { font-size: 0.9em; }
-article .article-footer { text-align: right; margin-bottom: 2em; }
+article .article-footer { text-align: right; }
 
 .moretag { font-weight: bold; }
 
 .bluebordered { border-left: 2px solid #007aff; }
 
-.row.row.tweets-and-blog { margin-bottom: 3em; }
+.row.row.tweets-and-blog { margin-top: 2em; margin-bottom: 3em; }
 
 .tweets-image { display: inline-block; width: 291px; height: 114px; background-color: white; background-image: url("../images/tweets.png"); background-repeat: no-repeat; }
 .tweets-image:hover { background-color: white; background-image: url("../images/tweets_hover.png"); }
@@ -608,14 +608,14 @@ article .article-footer { text-align: right; margin-bottom: 2em; }
 .instagram-image { display: inline-block; width: 300px; height: 304px; background-color: white; background-image: url("../images/instagram.png"); background-repeat: no-repeat; }
 .instagram-image:hover { background-color: white; background-image: url("../images/instagram_hover.png"); }
 
-.artists-image { display: inline-block; width: 300px; height: 220px; background-color: white; background-image: url("../images/artists.png"); background-repeat: no-repeat; }
-.artists-image:hover { background-color: white; background-image: url("../images/artists_hover.png"); }
-
 .social-media { font-size: 2em; color: #ff005c; }
 .social-media a { font-size: 1.5em; color: #007aff; padding: 0 0.25em; }
 .social-media a:hover { color: #ff005c; }
 .social-media .icon-twitter { margin-left: 0.25em; }
 .social-media .follow { position: relative; font-size: 0.85em; top: -8px; }
+
+.artists-image { display: inline-block; width: 300px; height: 220px; background-color: white; background-image: url("../images/artists.png"); background-repeat: no-repeat; }
+.artists-image:hover { background-color: white; background-image: url("../images/artists_hover.png"); }
 
 .sidebar .lineup ul.artists { list-style-type: none; padding-left: 0; text-transform: uppercase; font-size: 1.2em; font-weight: bold; line-height: 1.2; }
 .sidebar .lineup ul.artists a { color: #007aff; }

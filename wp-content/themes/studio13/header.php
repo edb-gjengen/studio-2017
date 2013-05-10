@@ -60,7 +60,7 @@
 				<div id="inner-header" class="row">
                     <div class="logo small-8 columns"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /></a><img src="<?php echo get_template_directory_uri(); ?>/images/logo_multiply.png" class="multiply" /></div>
                     <div class="small-4 columns">
-                        <span class="date">12.-24. aug</span><img src="<?php echo get_template_directory_uri(); ?>/images/line.png"></span></div>
+                        <span class="date">12.-24. aug</span><img src="<?php echo get_template_directory_uri(); ?>/images/line.png"></div>
 				</div> <!-- end #inner-header -->
                 <div class="row">
                     <nav role="navigation" class="small-12 columns">

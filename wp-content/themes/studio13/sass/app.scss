@@ -170,7 +170,7 @@ header.header {
 
     .date {
         color: $primary-color;
-        font-size: 3.44em;
+        font-size: 3.4em;
         text-transform: uppercase;
         font-weight: 600;
         margin-bottom: 10px;
@@ -193,13 +193,13 @@ header.header {
     .nav-menu {
         @include inline-block-list;
         margin: 0 auto;
-        background-color: $primary-color;
 
         a {
+            background-color: $primary-color;
             font-size: 1.5em;
             font-weight: 600;
             display: inline-block;
-            padding: .7em .812em;
+            padding: .7em .805em;
             color: white;
             text-transform: uppercase;
             position: relative;
@@ -262,7 +262,7 @@ header.header {
     }
 }
 article {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 
     p {
         margin-bottom: 0.6em;
@@ -289,7 +289,6 @@ article {
     
     .article-footer {
         text-align: right;
-        margin-bottom: 2em;
     }
 }
 .moretag {
@@ -299,6 +298,7 @@ article {
     border-left: 2px solid $primary-color;
 }
 .row.row.tweets-and-blog {
+    margin-top: 2em;
     margin-bottom: 3em;
 }
 .tweets-image {
@@ -343,20 +343,6 @@ article {
         background-image: url('../images/instagram_hover.png');
     }
 }
-.artists-image {
-    @extend .hide-text;
-    display: inline-block;
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    background-image: url('../images/artists.png');
-    background-repeat: no-repeat;
-
-    &:hover {
-        background-color: white;
-        background-image: url('../images/artists_hover.png');
-    }
-}
 .social-media {
     font-size: 2em;
     color: $secondary-color;
@@ -377,6 +363,20 @@ article {
         position: relative;
         font-size: 0.85em;
         top: -8px;
+    }
+}
+.artists-image {
+    @extend .hide-text;
+    display: inline-block;
+    width: 300px;
+    height: 220px;
+    background-color: white;
+    background-image: url('../images/artists.png');
+    background-repeat: no-repeat;
+
+    &:hover {
+        background-color: white;
+        background-image: url('../images/artists_hover.png');
     }
 }
 .sidebar {
