@@ -33,7 +33,7 @@
             <?php endwhile; ?>
                 <div class="row">
                     <div class="small-12 columns">
-                        <a href="/nyheter/" class="button small-12">Les flere nyheter her</a>
+                        <a href="/nyheter/" class="button small-12">Les flere nyheter</a>
                     </div>
                 </div>
                 <div class="row tweets-and-blog">

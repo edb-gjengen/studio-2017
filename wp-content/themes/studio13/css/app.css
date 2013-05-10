@@ -565,12 +565,12 @@ a.colored:hover img { opacity: .4; }
 .disco.reversed { -webkit-animation: disco 0.5s 0.5s infinite alternate; -moz-animation: disco 0.5s 0.5s infinite alternate; -o-animation: disco 0.5s 0.5s infinite alternate; animation: disco 0.5s 0.5s infinite alternate; }
 
 header.header { margin-top: 2em; margin-bottom: 2em; }
-header.header .date { color: #007aff; font-size: 3.45em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: inline-block; }
+header.header .date { color: #007aff; font-size: 3.44em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: inline-block; }
 header.header .logo img { position: relative; bottom: -15px; left: 10px; }
 header.header .logo img.multiply { position: absolute; left: 372px; bottom: -12px; z-index: 1; }
 header.header .nav-menu { margin: 0; padding: 0; border: 0; overflow: hidden; *zoom: 1; margin: 0 auto; background-color: #007aff; }
 header.header .nav-menu li { list-style-image: none; list-style-type: none; margin-left: 0; display: -moz-inline-stack; display: inline-block; vertical-align: middle; *vertical-align: auto; zoom: 1; *display: inline; white-space: nowrap; }
-header.header .nav-menu a { font-size: 1.5em; font-weight: 600; display: inline-block; padding: .7em .813em; color: white; text-transform: uppercase; position: relative; }
+header.header .nav-menu a { font-size: 1.5em; font-weight: 600; display: inline-block; padding: .7em .812em; color: white; text-transform: uppercase; position: relative; }
 header.header .nav-menu a:hover { z-index: 2; background-color: #ff005c; }
 
 .highlight a { height: 280px; line-height: 1.1; font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; display: block; color: white; background-color: #ff005c; }
@@ -639,7 +639,7 @@ article .article-footer { text-align: right; margin-bottom: 2em; }
 .template-artists img { display: block; }
 .template-artists .artists { font-size: 1.5em; text-transform: uppercase; text-align: center; font-weight: bold; }
 .template-artists .artists .artist-box a { color: #007aff; }
-.template-artists .artists .artist-box a span { display: block; color: #007aff; background-color: white; }
+.template-artists .artists .artist-box a span { display: block; color: white; background-color: #007aff; }
 .template-artists .artists .artist-box a:hover { color: white; }
 .template-artists .artists .artist-box a:hover span { color: white; background-color: #ff005c; }
 
