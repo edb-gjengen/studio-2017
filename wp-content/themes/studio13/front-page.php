@@ -1,13 +1,18 @@
 <?php get_header(); ?>
 <div id="featured" class="row">
     <div class="highlight small-4 columns">
-    <a href="#"><span><div class="number"><?php echo "100"; // FIXME: dynamic ?></div>dager igjen</span></a>
+    <a href="#"><span><div class="number"><?php
+        $now = time();
+        $your_date = strtotime("2013-08-12");
+        $datediff = $your_date - $now;
+        echo floor($datediff/(60*60*24));
+    ?></div>dager igjen</span></a>
     </div>
     <div class="highlight small-4 columns text-center">
-        <a href="#" class="highlight-image">Bli Frivillig</a>
+        <a href="/frivillig" class="highlight-image">Bli Frivillig</a>
     </div>
     <div class="highlight small-4 columns">
-        <a href="#"><span class="larger">Kjøp billett</span></a>
+        <a href="/billetter"><span class="larger">Kjøp billett</span></a>
     </div>
 </div>
 <div class="row">
@@ -33,11 +38,11 @@
                 </div>
                 <div class="row tweets-and-blog">
                     <div class="small-6 columns">
-                        <a href="#" class="tweets-image">Tweets tagget med #studiofestivalen</a>
+                        <a href="http://twitter.com/studiofestival" class="tweets-image">Tweets tagget med #studiofestivalen</a>
                         <ul class="twitter-feed"></ul>
                     </div>
                     <div class="bluebordered text-center small-6 columns">
-                        <a href="#" class="blog-image">Blogg</a>
+                        <a href="/blogg" class="blog-image">Blogg</a>
                     </div>
                 </div>
                 <div class="row">
