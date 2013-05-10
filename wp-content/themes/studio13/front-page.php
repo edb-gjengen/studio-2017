@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="featured" class="row">
     <div class="highlight small-4 columns">
-        <a href="#"><span><div class="number">100</div>dager igjen</span></a>
+    <a href="#"><span><div class="number"><?php echo "100"; // FIXME: dynamic ?></div>dager igjen</span></a>
     </div>
     <div class="highlight small-4 columns text-center">
         <a href="#" class="highlight-image">Bli Frivillig</a>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="row social-media">
                     <div class="small-12 columns">
-                        <p><span class="uppercase">Følg oss på:</span> <img src="<?php echo get_template_directory_uri(); ?>/images/vimeo.png" /> <img src="<?php echo get_template_directory_uri(); ?>/images/flickr.png" /> <i class="icon-twitter"></i> <i class="icon-facebook"></i> </p>
+                        <span class="follow uppercase semi-bold">Følg oss på:</span> <a href="http://twitter.com/studiofestival"><i class="icon-twitter"></i></a> <a href="https://www.facebook.com/studiofestival"><i class="icon-facebook"></i></a>
                     </div>
                 </div>
             <?php else : ?>

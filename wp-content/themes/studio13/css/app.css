@@ -524,16 +524,23 @@ body a:hover { color: #ff005c; }
 
 .hide-text, .highlight a.highlight-image, .tweets-image, .blog-image, .instagram-image, .artists-image { text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
+.uppercase { text-transform: uppercase; }
+
+.semi-bold { font-weight: 600; }
+
 /* buttons */
 body .button { border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; text-transform: uppercase; }
 body .btn-tiny { text-align: center; font-size: 1.3em; display: inline-block; color: white; width: 32px; height: 32px; line-height: 32px; }
-body .btn-tiny .icon-twitter { font-size: 0.7em; }
+body .btn-tiny .icon-twitter { font-size: 0.8em; }
 body .primary { background-color: #007aff; }
 body .primary:hover { color: white; background-color: #ff005c; }
 body .secondary, body .button { background-color: #ff005c; }
 body .secondary:hover, body .button:hover { color: white; background-color: #007aff; }
 
-/* Image hover filters */
+/* Images */
+.attachment-eight-columns, .attachment-four-columns { width: 100%; }
+
+/* hover filters */
 a.filter { position: relative; float: left; cursor: pointer; background-color: white; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); filter: grayscale(100%); }
 a.filter:hover { -webkit-filter: none; -moz-filter: none; filter: none; background-color: white; }
 
@@ -585,9 +592,10 @@ article .article-footer { text-align: right; margin-bottom: 2em; }
 .artists-image:hover { background-color: white; background-image: url("../images/artists_hover.png"); }
 
 .social-media { font-size: 2em; color: #ff005c; }
-.social-media img, .social-media i { padding-left: 1em; }
-.social-media i { font-size: 1.5em; color: #007aff; }
-.social-media .uppercase { text-transform: uppercase; }
+.social-media a { font-size: 1.5em; color: #007aff; padding: 0 0.25em; }
+.social-media a:hover { color: #ff005c; }
+.social-media .icon-twitter { margin-left: 0.25em; }
+.social-media .follow { position: relative; font-size: 0.85em; top: -8px; }
 
 .sidebar .lineup ul.artists { list-style-type: none; padding-left: 0; text-transform: uppercase; font-size: 1.2em; font-weight: bold; line-height: 1.2; }
 .sidebar .lineup ul.artists a { color: #007aff; }

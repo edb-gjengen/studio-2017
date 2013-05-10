@@ -69,6 +69,12 @@ body {
     white-space: nowrap;
     overflow: hidden;
 }
+.uppercase {
+    text-transform: uppercase;
+}
+.semi-bold {
+    font-weight: 600;
+}
 /* buttons */
 body {
     .button {
@@ -86,8 +92,9 @@ body {
         width: $size;
         height: $size;
         line-height: $size;
+
         .icon-twitter {
-            font-size: 0.7em;
+            font-size: 0.8em;
         }
     }
     .primary {
@@ -107,7 +114,12 @@ body {
         }
     }
 }
-/* Image hover filters */
+/* Images */
+.attachment-eight-columns,
+.attachment-four-columns {
+    width: 100%;
+}
+/* hover filters */
 a.filter {
 	position: relative;
 	float: left;
@@ -330,15 +342,22 @@ article {
     font-size: 2em;
     color: $secondary-color;
 
-    img, i {
-        padding-left: 1em;
-    }
-    i {
+    a {
         font-size: 1.5em;
         color: $primary-color;
+        padding: 0 0.25em;
+
+        &:hover {
+            color: $secondary-color;
+        }
     }
-    .uppercase {
-        text-transform: uppercase;
+    .icon-twitter {
+        margin-left: 0.25em;
+    }
+    .follow {
+        position: relative;
+        font-size: 0.85em;
+        top: -8px;
     }
 }
 .sidebar {
