@@ -1,5 +1,5 @@
 function format_image(img) {
-    return '<li><a href="'+ img.link +'" class="filter primary"><img src="'+ img.images.low_resolution.url +'" /></a></li>';
+    return '<li><a href="'+ img.link +'" class="colored primary"><img src="'+ img.images.low_resolution.url +'" /></a></li>';
 }
 jQuery(document).foundation();
 

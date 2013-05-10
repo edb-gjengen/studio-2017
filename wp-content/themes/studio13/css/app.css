@@ -519,8 +519,10 @@ table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoo
 /* General styles */
 body h1, body h2, body h3, body h4 { text-transform: uppercase; }
 body h1 { margin-bottom: 0.3em; }
-body a { -webkit-transition: background-color 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, color 0.15s ease; }
+body a { -webkit-transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; }
 body a:hover { color: #ff005c; }
+body span, body input[type=submit] { -webkit-transition: background-color 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, color 0.15s ease; }
+body img { -webkit-transition: opacity 0.15s ease; -moz-transition: opacity 0.15s ease; -o-transition: opacity 0.15s ease; transition: opacity 0.15s ease; }
 
 .hide-text, .highlight a.highlight-image, .tweets-image, .blog-image, .instagram-image, .artists-image { text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
@@ -540,9 +542,27 @@ body .secondary:hover, body .button:hover { color: white; background-color: #007
 /* Images */
 .attachment-eight-columns, .attachment-four-columns { width: 100%; }
 
-/* hover filters */
-a.filter { position: relative; float: left; cursor: pointer; background-color: white; -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); filter: grayscale(100%); }
-a.filter:hover { -webkit-filter: none; -moz-filter: none; filter: none; background-color: white; }
+/* more hover stuff */
+a.colored { display: block; background-color: #ff005c; }
+a.colored.primary { background-color: #007aff; }
+a.colored img { display: block; width: 100%; }
+a.colored:hover img { opacity: .4; }
+
+/* Disco */
+@-moz-keyframes disco { from { background-color: #007aff; }
+  to { background-color: #ff005c; } }
+
+@-webkit-keyframes disco { from { background-color: #007aff; }
+  to { background-color: #ff005c; } }
+
+@-o-keyframes disco { from { background-color: #007aff; }
+  to { background-color: #ff005c; } }
+
+@keyframes disco { from { background-color: #007aff; }
+  to { background-color: #ff005c; } }
+
+.disco { color: white; background-color: #007aff; -webkit-animation: disco 0.5s infinite alternate; -moz-animation: disco 0.5s infinite alternate; -o-animation: disco 0.5s infinite alternate; animation: disco 0.5s infinite alternate; }
+.disco.reversed { -webkit-animation: disco 0.5s 0.5s infinite alternate; -moz-animation: disco 0.5s 0.5s infinite alternate; -o-animation: disco 0.5s 0.5s infinite alternate; animation: disco 0.5s 0.5s infinite alternate; }
 
 header.header { margin-top: 2em; margin-bottom: 2em; }
 header.header .date { color: #007aff; font-size: 3.45em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: inline-block; }
@@ -566,9 +586,9 @@ header.header .nav-menu a:hover { z-index: 2; background-color: #ff005c; }
 
 article { margin-bottom: 1em; }
 article p { margin-bottom: 0.6em; }
-article .article-header h1 a { color: inherit; }
+article .article-header h1 a { color: #ff005c; background-color: white; }
 article .article-header h1 a:hover { color: #007aff; }
-article .article-header h4 a { color: #ff005c; }
+article .article-header h4 a { color: #ff005c; background-color: white; }
 article .article-header h4 a:hover { color: #007aff; }
 article .entry-content { font-size: 0.9em; }
 article .article-footer { text-align: right; margin-bottom: 2em; }
@@ -619,5 +639,14 @@ article .article-footer { text-align: right; margin-bottom: 2em; }
 .template-artists img { display: block; }
 .template-artists .artists { font-size: 1.5em; text-transform: uppercase; text-align: center; font-weight: bold; }
 .template-artists .artists .artist-box a { color: #007aff; }
+.template-artists .artists .artist-box a span { display: block; color: #007aff; background-color: white; }
 .template-artists .artists .artist-box a:hover { color: white; }
-.template-artists .artists .artist-box a:hover span { display: block; background-color: #ff005c; }
+.template-artists .artists .artist-box a:hover span { color: white; background-color: #ff005c; }
+
+/* 404 */
+.search .screen-reader-text { display: none; }
+.search label, .search input { margin-bottom: 10px; }
+.search input { width: 300px; margin: 0 auto; }
+.search input[type=text] { margin-bottom: 1em; }
+.search input[type=submit] { text-transform: uppercase; font-weight: bold; padding: 0.5em 0.4em; background-color: #ff005c; color: white; border: 0; }
+.search input[type=submit]:hover { background-color: #007aff; }

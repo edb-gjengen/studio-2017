@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" role="article">
     <div class="row">
         <div class="small-6 columns">
-            <a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('four-columns'); ?></a>
+            <a href="<?php the_permalink() ?>" class="colored" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('four-columns'); ?></a>
         </div>
         <div class="small-6 columns">
             <header class="article-header">

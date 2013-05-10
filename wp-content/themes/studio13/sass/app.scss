@@ -42,6 +42,7 @@
 @import "compass/css3/transition";
 @import "compass/css3/box-shadow";
 @import "compass/css3/filter";
+@import "compass/css3/animation"; // requires compass v0.13, see README.md
 
 $multiplied: #00005c; // FIXME:  use this instead of transparent water?
 
@@ -56,11 +57,21 @@ body {
     a {
         @include transition(
             background-color .15s ease,
+            background-image .15s ease,
             color .15s ease);
 
         &:hover {
             color: $secondary-color;
         }
+    }
+    span,
+    input[type=submit] {
+        @include transition(
+            background-color .15s ease,
+            color .15s ease);
+    }
+    img {
+        @include transition(opacity .15s ease);
     }
     
 }
@@ -119,32 +130,38 @@ body {
 .attachment-four-columns {
     width: 100%;
 }
-/* hover filters */
-a.filter {
-	position: relative;
-	float: left;
-	cursor: pointer;
-    background-color: white;
-    &:hover {
-        @include filter(none);
-        background-color: white;
+/* more hover stuff */
+a.colored {
+    display: block;
+    background-color: $secondary-color;
+
+    &.primary {
+        background-color: $primary-color;
     }
-    @include filter(grayscale(100%));
-    //&:before {
-    //    content: "";
-    //    display: block;
-    //    position: absolute;
-    //    top: 0;
-    //    bottom: 0;
-    //    left: 0;
-    //    right: 0;
-    //    background-color: transparent;
-    //}
-    //&:hover:before {
-    //    background-color: $primary-color;
-    //    opacity: .8;
-    //    @include transition( any .15s ease);
-    //}
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    &:hover img {
+        opacity: .4;
+    }
+}
+/* Disco */
+@include keyframes(disco) {
+    from { background-color: $primary-color; }
+    to { background-color: $secondary-color; }
+
+}
+.disco {
+    color: white;
+    background-color: $primary-color;
+    @include animation(disco .5s infinite alternate);
+
+    &.reversed {
+        @include animation(disco .5s .5s infinite alternate);
+    }
 }
 
 header.header {
@@ -253,7 +270,8 @@ article {
 
     .article-header {
         h1 a {
-            color: inherit;
+            color: $secondary-color;
+            background-color: white;
 
             &:hover {
                 color: $primary-color;
@@ -261,6 +279,7 @@ article {
         }
         h4 a {
             color: $secondary-color;
+            background-color: white;
             &:hover { color: $primary-color; }
         }
     }
@@ -453,10 +472,16 @@ article {
         .artist-box {
             a {
                 color: $primary-color;
+                span {
+                    display: block;
+                    color: $primary-color;
+                    background-color: white;
+                }
+
                 &:hover {
                     color: white;
                     span {
-                        display: block;
+                        color: white;
                         background-color: $secondary-color;
                     }
                 }
@@ -465,5 +490,33 @@ article {
         }
 
     }
+}
+/* 404 */
+.search {
+    .screen-reader-text {
+        display: none;
+    }
+    label,
+    input {
+        margin-bottom: 10px;
+    }
+    input {
+        width: 300px;
+        margin: 0 auto;
+        &[type=text]{
+            margin-bottom: 1em;
+        }
+        &[type=submit] {
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 0.5em 0.4em;
+            background-color: $secondary-color;
+            color: white;
+            border: 0;
 
+            &:hover {
+                background-color: $primary-color;
+            }
+        }
+    }
 }
