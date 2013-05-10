@@ -21,9 +21,7 @@ Template Name: Artists page
                             /* Print our custom post type */
 $query = new WP_Query( array ( 'post_type' => 'artist', 'orderby' => 'title', 'order' => 'asc') );
                             while ( $query->have_posts() ):
-                                $query->the_post(); ?>
-<li><a href="<?php the_permalink();?>"><?php the_post_thumbnail('artist-thumb'); the_title(); ?></a></li>
-                        <?php endwhile;
+                                $query->the_post(); ?><li class="artist-box"><a href="<?php the_permalink();?>"><?php the_post_thumbnail('artist-thumb'); the_title(); ?></a></li><?php endwhile;
                             wp_reset_postdata();?>
                         </ul>
                 </section> <!-- end article section -->

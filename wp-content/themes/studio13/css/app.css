@@ -616,4 +616,6 @@ article .article-footer { text-align: right; margin-bottom: 2em; }
 .row { /* FIXME: responsive */ width: 1000px; max-width: 1000px; }
 
 /* Template styles */
-.template-artists .artists { font-size: 1.5em; text-transform: uppercase; }
+.template-artists .artists { font-size: 1.5em; text-transform: uppercase; text-align: center; font-weight: bold; }
+.template-artists .artists .artist-box a { color: #007aff; }
+.template-artists .artists .artist-box a:hover { color: white; background-color: #ff005c; }

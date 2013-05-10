@@ -445,6 +445,18 @@ article {
     .artists {
         font-size: 1.5em;
         text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        .artist-box {
+            a {
+                color: $primary-color;
+                &:hover {
+                    color: white;
+                    background-color: $secondary-color;
+                }
+            }
+
+        }
 
     }
 
