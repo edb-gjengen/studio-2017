@@ -3,10 +3,11 @@
         <footer class="footer" role="contentinfo">
             <div class="wavetop"></div>
             <div id="inner-footer">
-                <a href="http://studentersamfundet.no/"><img src="<?php echo get_template_directory_uri(); ?>/images/streamer.png" /></a>
-                <!--<nav role="navigation">
-                    <?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_class' => 'footer-menu' ) ); ?>
-                </nav>-->
+                <div class="anda-da-zee"><div class="punsjebollen">
+                <div class="bubble first"></div>
+                <div class="bubble second"></div>
+                <div class="bubble third"></div>
+</div></div>
             </div> <!-- end #inner-footer -->
         </footer> <!-- end footer -->
     </div> <!-- end #container -->

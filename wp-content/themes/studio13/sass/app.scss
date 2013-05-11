@@ -44,6 +44,7 @@
 @import "compass/css3/filter";
 @import "compass/css3/animation"; // requires compass v0.13, see README.md
 @import "compass/css3/images";
+@import "compass/css3/border-radius";
 
 $multiplied: #00005e; // FIXME:  use this instead of transparent water?
 
@@ -546,4 +547,73 @@ article {
         @include background-image( url('../images/punsjebolle.png'));
         background-repeat: no-repeat;
     }
+    .bubble {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        position: absolute;
+        bottom: 30px;
+        @include border-radius(50% 50%);
+        border: 6px solid $primary-color;
+
+        &.first {
+            left: 80px;
+            width: 50px;
+            height: 50px;
+            border: 14px solid $primary-color;
+            @include animation(fade-move-long 4s infinite);
+        }
+        &.second {
+            left: 150px;
+            width: 35px;
+            height: 35px;
+            bottom: 40px;
+            border: 10px solid $primary-color;
+            @include animation(fade-move-middle 4s .6s infinite);
+        }
+        &.third {
+            left: 100px;
+            @include animation(fade-move 4s 1.4s infinite);
+        }
+    }
+}
+/* fade move bubbles */
+@include keyframes(fade-move) {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        bottom: 230px;
+    }
+
+}
+@include keyframes(fade-move-middle) {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        bottom: 330px;
+    }
+
+}
+@include keyframes(fade-move-long) {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        bottom: 430px;
+    }
+
 }
