@@ -10,7 +10,9 @@
         <?php the_content(); ?>
     </section> <!-- end article section -->
     <footer class="article-footer">
+        <?php if(!is_page()) { ?>
         <a href="" class="btn-tiny primary"><i class="icon-facebook"></i></a>
         <a href="" class="btn-tiny secondary"><i class="icon-twitter"></i></a>
+        <?php } ?>
     </footer> <!-- end article footer -->
 </article> <!-- end article -->

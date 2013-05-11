@@ -26,8 +26,6 @@ $query = new WP_Query( array ( 'post_type' => 'artist', 'orderby' => 'title', 'o
                         </ul>
                 </section> <!-- end article section -->
                 <footer class="article-footer">
-                    <a href="" class="btn-tiny primary"><i class="icon-facebook"></i></a>
-                    <a href="" class="btn-tiny secondary"><i class="icon-twitter"></i></a>
                 </footer> <!-- end article footer -->
             </article> <!-- end article -->
         </div> <!-- end #main -->
