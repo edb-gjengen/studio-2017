@@ -624,10 +624,11 @@ article .article-footer { text-align: right; }
 .sidebar .lineup ul.artists.headliners li:nth-child(even) a { color: #ff005c; }
 .sidebar .lineup ul.artists.headliners li:nth-child(even) a:hover { color: white; background-color: #007aff; }
 
-.footer { min-width: 100%; text-align: center; height: 400px; background-color: #007aff; }
-.footer #inner-footer img { margin-top: 100px; }
+.flying-megawhale { width: 719px; height: 582px; background-image: url("../images/megawhale_wink.gif"); background-size: 100% 100%; background-repeat: no-repeat; margin: auto; margin-top: 4em; position: relative; top: 50px; z-index: -1; }
+.flying-megawhale img { position: absolute; right: -20px; top: 0px; width: 190px; }
 
-.flying-megawhale { width: 719px; height: 582px; background-image: url("../images/megawhale.png"); background-size: 100% 100%; background-repeat: no-repeat; margin: auto; margin-top: 4em; position: relative; top: 50px; z-index: -1; }
+.footer { position: relative; z-index: 2; min-width: 100%; text-align: center; height: 400px; background-color: #007aff; }
+.footer #inner-footer img { margin-top: 100px; }
 
 .wave { position: fixed; left: 0px; bottom: 0px; height: 30px; width: 100%; background-color: #007aff; }
 
@@ -650,3 +651,7 @@ article .article-footer { text-align: right; }
 .search input[type=text] { margin-bottom: 1em; }
 .search input[type=submit] { text-transform: uppercase; font-weight: bold; padding: 0.5em 0.4em; background-color: #ff005c; color: white; border: 0; }
 .search input[type=submit]:hover { background-color: #007aff; }
+
+/* Samuel E. Wright - Under the sea */
+.anda-da-zee { position: relative; width: 100%; height: 1200px; background-image: -webkit-linear-gradient(#007aff, #00005e); background-image: -moz-linear-gradient(#007aff, #00005e); background-image: -o-linear-gradient(#007aff, #00005e); background-image: linear-gradient(#007aff, #00005e); border-bottom: solid 65px #000043; }
+.anda-da-zee .punsjebollen { position: absolute; bottom: -40px; left: 25%; z-index: 1; width: 512px; height: 340px; background-image: url("../images/punsjebolle.png"); background-repeat: no-repeat; }

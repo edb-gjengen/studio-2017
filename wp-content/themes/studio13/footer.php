@@ -1,5 +1,5 @@
         <div class="wave"><div class="wavetop"></div></div>
-        <div class="flying-megawhale"></div>
+        <div class="flying-megawhale"><img src="<?php echo get_template_directory_uri(); ?>/images/thinking.gif" /></div>
         <footer class="footer" role="contentinfo">
             <div class="wavetop"></div>
             <div id="inner-footer">

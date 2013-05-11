@@ -26,4 +26,35 @@ jQuery(function($) {
         }
     });
     feed.run();
+
+    /* konami code */
+    var showing = false;
+    var anda_da_zee = '<div class="anda-da-zee"><div class="punsjebollen"></div></div>';
+    function showKonami() {
+        if (showing) { return; }
+        $("#inner-footer").html(anda_da_zee);
+        showing = true;
+    }
+
+    var kkeys = [];
+    var konamiString = "38,38,40,40,37,39,37,39,66,65";
+    // up, up, down, down, left, right, left, right, B, A
+
+    if (window.addEventListener) {
+        window.addEventListener('keydown', function(e) {
+            kkeys.push(e.keyCode );
+            if (kkeys.toString().indexOf(konamiString) >= 0 )
+            showKonami();
+        }, true)
+    }
+    /* IE */
+    else if(document.body.attachEvent) {
+        document.body.attachEvent('onkeydown', function(e){
+            kkeys.push(e.keyCode);
+            if (kkeys.toString().indexOf(konamiString) >= 0)		
+            showKonami();
+        }, true)
+    }
+    
 });
+

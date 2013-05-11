@@ -43,8 +43,9 @@
 @import "compass/css3/box-shadow";
 @import "compass/css3/filter";
 @import "compass/css3/animation"; // requires compass v0.13, see README.md
+@import "compass/css3/images";
 
-$multiplied: #00005c; // FIXME:  use this instead of transparent water?
+$multiplied: #00005e; // FIXME:  use this instead of transparent water?
 
 /* General styles */
 body {
@@ -413,7 +414,27 @@ article {
     }
 
 }
+.flying-megawhale {
+    width: 719px;
+    height: 582px;
+    background-image: url("../images/megawhale_wink.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 4em;
+    position: relative;
+    top: 50px;
+    z-index: -1;
+    img {
+        position: absolute;
+        right: -20px;
+        top: 0px;
+        width: 190px;
+    }
+}
 .footer {
+    position: relative;
+    z-index: 2;
     min-width: 100%;
     text-align: center;
     height: 400px;
@@ -423,18 +444,6 @@ article {
             margin-top: 100px;
         }
     }
-}
-.flying-megawhale {
-    width: 719px;
-    height: 582px;
-    background-image: url("../images/megawhale.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    margin: auto;
-    margin-top: 4em;
-    position: relative;
-    top: 50px;
-    z-index: -1;
 }
 .wave {
     position:fixed;
@@ -518,5 +527,23 @@ article {
                 background-color: $primary-color;
             }
         }
+    }
+}
+/* Samuel E. Wright - Under the sea */
+.anda-da-zee {
+    position: relative;
+    width: 100%;
+    height: 1200px;
+    @include background-image(linear-gradient($primary-color, $multiplied));
+    border-bottom: solid 65px #000043;
+    .punsjebollen {
+        position: absolute;
+        bottom: -40px;
+        left: 25%;
+        z-index: 1;
+        width: 512px;
+        height: 340px;
+        @include background-image( url('../images/punsjebolle.png'));
+        background-repeat: no-repeat;
     }
 }
