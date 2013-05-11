@@ -653,5 +653,5 @@ article .article-footer { text-align: right; }
 .search input[type=submit]:hover { background-color: #007aff; }
 
 /* Samuel E. Wright - Under the sea */
-.anda-da-zee { position: relative; width: 100%; height: 1200px; background-image: -webkit-linear-gradient(#007aff, #00005e); background-image: -moz-linear-gradient(#007aff, #00005e); background-image: -o-linear-gradient(#007aff, #00005e); background-image: linear-gradient(#007aff, #00005e); border-bottom: solid 65px #000043; }
+.anda-da-zee { position: relative; width: 100%; height: 5000px; background-image: -webkit-linear-gradient(#007aff, #00005e); background-image: -moz-linear-gradient(#007aff, #00005e); background-image: -o-linear-gradient(#007aff, #00005e); background-image: linear-gradient(#007aff, #00005e); border-bottom: solid 65px #000043; }
 .anda-da-zee .punsjebollen { position: absolute; bottom: -40px; left: 25%; z-index: 1; width: 512px; height: 340px; background-image: url("../images/punsjebolle.png"); background-repeat: no-repeat; }
