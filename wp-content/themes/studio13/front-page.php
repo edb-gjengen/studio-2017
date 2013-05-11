@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div id="featured" class="row">
     <div class="highlight small-4 columns">
-    <a href="#"><span><div class="number"><?php
+    <a href="/info"><span><div class="number"><?php
         $now = time();
         $your_date = strtotime("2013-08-12");
         $datediff = $your_date - $now;
