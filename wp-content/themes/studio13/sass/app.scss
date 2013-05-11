@@ -47,6 +47,7 @@
 @import "compass/css3/border-radius";
 
 $multiplied: #00005e; // FIXME:  use this instead of transparent water?
+$punch-color: #000043;
 
 /* General styles */
 body {
@@ -461,7 +462,11 @@ article {
     background-image: url("../images/wave_top.png");
     background-size: 48px 12px;
     background-repeat: repeat-x;
+    background-position: 0;
     width:100%;
+    &.animated {
+        @include animation(move-left 1s infinite linear);
+    }
 }
 .row {
     /* FIXME: responsive */
@@ -536,7 +541,7 @@ article {
     width: 100%;
     height: 5000px;
     @include background-image(linear-gradient($primary-color, $multiplied));
-    border-bottom: solid 65px #000043;
+    border-bottom: solid 65px $punch-color;
     .punsjebollen {
         position: absolute;
         bottom: -40px;
@@ -546,6 +551,16 @@ article {
         height: 340px;
         @include background-image( url('../images/punsjebolle.png'));
         background-repeat: no-repeat;
+    }
+    .trail-of-bubbles {
+        position: absolute;
+        top: 475px;
+        left: 50%;
+
+        .bubble {
+            border-color: darken($primary-color, 10%);
+        }
+
     }
     .bubble {
         width: 20px;
@@ -560,7 +575,7 @@ article {
             left: 80px;
             width: 50px;
             height: 50px;
-            border: 14px solid $primary-color;
+            border-width: 14px;
             @include animation(fade-move-long 4s infinite);
         }
         &.second {
@@ -568,7 +583,7 @@ article {
             width: 35px;
             height: 35px;
             bottom: 40px;
-            border: 10px solid $primary-color;
+            border-width: 10px;
             @include animation(fade-move-middle 4s .6s infinite);
         }
         &.third {
@@ -616,4 +631,13 @@ article {
         bottom: 430px;
     }
 
+}
+/* move left */
+@include keyframes(move-left) {
+    0% {
+        background-position: 0;
+    }
+    100% {
+        background-position: 48px;
+    }
 }

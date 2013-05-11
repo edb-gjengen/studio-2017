@@ -29,10 +29,12 @@ jQuery(function($) {
 
     /* konami code */
     var showing = false;
-    var anda_da_zee = '<div class="anda-da-zee"><div class="punsjebollen"></div></div>';
+    var anda_da_zee = '<div class="anda-da-zee"><div class="trail-of-bubbles"><div class="bubble first"></div><div class="bubble second"></div><div class="bubble third"></div></div><div class="punsjebollen"><div class="bubble first"></div><div class="bubble second"></div><div class="bubble third"></div></div></div>';
+    
     function showKonami() {
         if (showing) { return; }
         $("#inner-footer").html(anda_da_zee);
+        $(".wavetop").addClass('animated');
         showing = true;
     }
 
