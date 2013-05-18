@@ -516,15 +516,18 @@ table tr th, table tr td { padding: 0.5625em 0.625em; font-size: 0.875em; color:
 table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #f9f9f9; }
 table thead tr th, table tfoot tr th, table tbody tr td, table tr td, table tfoot tr td { display: table-cell; line-height: 1.125em; }
 
+/* Sprites */
+.hovers-sprite, .hover.fri-villig, .hover.fri-villig span, .hover.tweets, .hover.tweets span, .hover.blog, .hover.blog span, .hover.instagram, .hover.instagram span, .hover.artists, .hover.artists span { background-image: url('/wp-content/themes/studio13/images/hovers-s093e73b866.png'); background-repeat: no-repeat; }
+
 /* General styles */
 body h1, body h2, body h3, body h4 { text-transform: uppercase; }
 body h1 { margin-bottom: 0.3em; }
 body a { -webkit-transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, background-image 0.15s ease, color 0.15s ease; }
 body a:hover { color: #a000ff; }
-body span, body input[type=submit] { -webkit-transition: background-color 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, color 0.15s ease; }
+body span, body input[type=submit] { -webkit-transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; }
 body img { -webkit-transition: opacity 0.15s ease; -moz-transition: opacity 0.15s ease; -o-transition: opacity 0.15s ease; transition: opacity 0.15s ease; }
 
-.hide-text, .highlight a.highlight-image, .tweets-image, .blog-image, .instagram-image, .artists-image { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+.hide-text, .hover { text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
 .uppercase { text-transform: uppercase; }
 
@@ -541,6 +544,22 @@ body .secondary:hover, body .button:hover { color: white; background-color: #007
 
 /* Images */
 .attachment-eight-columns, .attachment-four-columns { width: 100%; }
+
+/* Image hovers */
+/* Note: Disabled automatic generation of :hover for fade transition */
+.hover { position: relative; }
+.hover span { position: absolute; top: 0; left: 0; bottom: 0; right: 0; opacity: 0; }
+.hover span:hover { opacity: 1; }
+.hover.fri-villig { background-position: 0 -968px; }
+.hover.fri-villig span { background-position: 0 -1263px; }
+.hover.tweets { display: block; width: 291px; height: 114px; background-position: 0 -2166px; }
+.hover.tweets span { background-position: 0 -2280px; }
+.hover.blog { display: block; width: 285px; height: 258px; background-position: 0 -460px; }
+.hover.blog span { background-position: 0 -714px; }
+.hover.instagram { display: block; width: 300px; height: 304px; background-position: 0 -1558px; }
+.hover.instagram span { background-position: 0 -1862px; }
+.hover.artists { display: block; width: 300px; height: 220px; background-position: 0 0; }
+.hover.artists span { background-position: 0 -230px; }
 
 /* more hover stuff */
 a.colored { display: block; background-color: #a000ff; }
@@ -573,10 +592,9 @@ header.header .nav-menu li { list-style-image: none; list-style-type: none; marg
 header.header .nav-menu a { background-color: #007aff; font-size: 1.5em; font-weight: 600; display: inline-block; padding: .7em .805em; color: white; text-transform: uppercase; position: relative; }
 header.header .nav-menu a:hover { z-index: 2; background-color: #a000ff; }
 
-.highlight a { height: 280px; line-height: 1.1; font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; display: block; color: white; background-color: #a000ff; }
-.highlight a.highlight-image { background-color: white; background-image: url("../images/fri_villig.png"); background-repeat: no-repeat; }
-.highlight a.highlight-image:hover { background-color: white; background-image: url("../images/fri_villig_hover.png"); }
-.highlight a:hover { color: white; background-color: #007aff; }
+.highlight a { height: 280px; line-height: 1.1; font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; display: block; }
+.highlight a.primary { color: white; background-color: #a000ff; }
+.highlight a.primary:hover { color: white; background-color: #007aff; }
 .highlight a span { display: inline-block; padding-top: 30px; }
 .highlight a span.larger { padding-top: 62px; font-size: 1.6em; }
 .highlight a .number { font-size: 3em; }
@@ -599,23 +617,11 @@ article .article-footer { text-align: right; }
 
 .row.row.tweets-and-blog { margin-top: 2em; margin-bottom: 3em; }
 
-.tweets-image { display: inline-block; width: 291px; height: 114px; background-color: white; background-image: url("../images/tweets.png"); background-repeat: no-repeat; }
-.tweets-image:hover { background-color: white; background-image: url("../images/tweets_hover.png"); }
-
-.blog-image { display: inline-block; width: 285px; height: 258px; background-color: white; background-image: url("../images/blog.png"); background-repeat: no-repeat; }
-.blog-image:hover { background-color: white; background-image: url("../images/blog_hover.png"); }
-
-.instagram-image { display: inline-block; width: 300px; height: 304px; background-color: white; background-image: url("../images/instagram.png"); background-repeat: no-repeat; }
-.instagram-image:hover { background-color: white; background-image: url("../images/instagram_hover.png"); }
-
 .social-media { font-size: 2em; color: #a000ff; }
 .social-media a { font-size: 1.5em; color: #007aff; padding: 0 0.25em; }
 .social-media a:hover { color: #a000ff; }
 .social-media .icon-twitter { margin-left: 0.25em; }
 .social-media .follow { position: relative; font-size: 0.85em; top: -8px; }
-
-.artists-image { display: inline-block; width: 300px; height: 220px; background-color: white; background-image: url("../images/artists.png"); background-repeat: no-repeat; }
-.artists-image:hover { background-color: white; background-image: url("../images/artists_hover.png"); }
 
 .sidebar .lineup ul.artists { list-style-type: none; padding-left: 0; text-transform: uppercase; font-size: 1.2em; font-weight: bold; line-height: 1.2; }
 .sidebar .lineup ul.artists a { color: #007aff; }
@@ -654,7 +660,7 @@ article .article-footer { text-align: right; }
 .search input[type=submit]:hover { background-color: #007aff; }
 
 /* Samuel E. Wright - Under the sea */
-.anda-da-zee { position: relative; width: 100%; height: 5000px; background-image: -webkit-linear-gradient(#007aff, #0b00ff); background-image: -moz-linear-gradient(#007aff, #0b00ff); background-image: -o-linear-gradient(#007aff, #0b00ff); background-image: linear-gradient(#007aff, #0b00ff); border-bottom: solid 65px #000043; }
+.anda-da-zee { position: relative; width: 100%; height: 5000px; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF007AFF', endColorstr='#FF0B00FF'); /* IE9 */ background-image: -webkit-linear-gradient(#007aff, #0b00ff); background-image: -moz-linear-gradient(#007aff, #0b00ff); background-image: -o-linear-gradient(#007aff, #0b00ff); background-image: linear-gradient(#007aff, #0b00ff); border-bottom: solid 65px #000043; }
 .anda-da-zee .punsjebollen { position: absolute; bottom: -40px; left: 25%; z-index: 1; width: 512px; height: 340px; background-image: url("../images/punsjebolle.png"); background-repeat: no-repeat; }
 .anda-da-zee .trail-of-bubbles { position: absolute; top: 475px; left: 50%; }
 .anda-da-zee .trail-of-bubbles .bubble { border-color: #0062cc; }

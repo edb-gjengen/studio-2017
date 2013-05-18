@@ -49,6 +49,9 @@
 $multiplied: #0b00ff; // FIXME:  use this instead of transparent water?
 $punch-color: #000043;
 
+/* Sprites */
+@import "hovers/*.png";
+
 /* General styles */
 body {
     h1,h2,h3,h4 {
@@ -71,6 +74,7 @@ body {
     input[type=submit] {
         @include transition(
             background-color .15s ease,
+            opacity .15s ease,
             color .15s ease);
     }
     img {
@@ -132,6 +136,56 @@ body {
 .attachment-eight-columns,
 .attachment-four-columns {
     width: 100%;
+}
+/* Image hovers */
+/* Note: Disabled automatic generation of :hover for fade transition */
+$disable-magic-sprite-selectors:true;
+.hover {
+    position: relative;
+    @extend .hide-text;
+    span{
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    &.fri-villig {
+        @include hovers-sprite(fri_villig);
+        span { @include hovers-sprite(fri_villig_hover); }
+    }
+    &.tweets {
+        display: block;
+        width: 291px;
+        height: 114px;
+        @include hovers-sprite(tweets);
+        span { @include hovers-sprite(tweets_hover); }
+    }
+    &.blog {
+        display: block;
+        width: 285px;
+        height: 258px;
+        @include hovers-sprite(blog);
+        span { @include hovers-sprite(blog_hover); }
+
+    }
+    &.instagram {
+        display: block;
+        width: 300px;
+        height: 304px;
+        @include hovers-sprite(instagram);
+        span { @include hovers-sprite(instagram_hover); }
+    }
+    &.artists {
+        display: block;
+        width: 300px;
+        height: 220px;
+        @include hovers-sprite(artists);
+        span { @include hovers-sprite(artists_hover); }
+    }
 }
 /* more hover stuff */
 a.colored {
@@ -223,23 +277,15 @@ header.header {
         text-transform: uppercase;
         text-align: center;
         display: block;
-        color: white;
-        background-color: $secondary-color;
 
-        &.highlight-image {
-            @extend .hide-text;
-            background-color: white;
-            background-image: url('../images/fri_villig.png');
-            background-repeat: no-repeat;
+        &.primary {
+            color: white;
+            background-color: $secondary-color;
 
             &:hover {
-                background-color: white;
-                background-image: url('../images/fri_villig_hover.png');
+                color: white;
+                background-color: $primary-color;
             }
-        }
-        &:hover {
-            color: white;
-            background-color: $primary-color;
         }
         span {
             display: inline-block;
@@ -251,7 +297,6 @@ header.header {
         }
         .number {
             font-size: 3em;
-
         }
     }
 }
@@ -304,48 +349,6 @@ article {
     margin-top: 2em;
     margin-bottom: 3em;
 }
-.tweets-image {
-    @extend .hide-text;
-    display: inline-block;
-    width: 291px;
-    height: 114px;
-    background-color: white;
-    background-image: url('../images/tweets.png');
-    background-repeat: no-repeat;
-
-    &:hover {
-        background-color: white;
-        background-image: url('../images/tweets_hover.png');
-    }
-}
-.blog-image {
-    @extend .hide-text;
-    display: inline-block;
-    width: 285px;
-    height: 258px;
-    background-color: white;
-    background-image: url('../images/blog.png');
-    background-repeat: no-repeat;
-
-    &:hover {
-        background-color: white;
-        background-image: url('../images/blog_hover.png');
-    }
-}
-.instagram-image {
-    @extend .hide-text;
-    display: inline-block;
-    width: 300px;
-    height: 304px;
-    background-color: white;
-    background-image: url('../images/instagram.png');
-    background-repeat: no-repeat;
-
-    &:hover {
-        background-color: white;
-        background-image: url('../images/instagram_hover.png');
-    }
-}
 .social-media {
     font-size: 2em;
     color: $secondary-color;
@@ -368,20 +371,7 @@ article {
         top: -8px;
     }
 }
-.artists-image {
-    @extend .hide-text;
-    display: inline-block;
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    background-image: url('../images/artists.png');
-    background-repeat: no-repeat;
 
-    &:hover {
-        background-color: white;
-        background-image: url('../images/artists_hover.png');
-    }
-}
 .sidebar {
     .lineup {
         ul.artists {
@@ -540,6 +530,7 @@ article {
     position: relative;
     width: 100%;
     height: 5000px;
+    @include filter-gradient($primary-color, $multiplied); /* IE9 */
     @include background-image(linear-gradient($primary-color, $multiplied));
     border-bottom: solid 65px $punch-color;
     .punsjebollen {
