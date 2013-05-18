@@ -1,6 +1,6 @@
 <div id="sidebar1" class="sidebar small-4 columns" role="complementary">
         <div class="lineup">
-            <a href="/artister/" class="hover artists">Artister<span></span></a>
+            <a href="/artister/" class="hover artists" title="Artister"><span></span></a>
             <ul class="artists headliners">
                 <?php
                 /* Print our custom post type */

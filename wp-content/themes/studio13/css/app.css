@@ -527,7 +527,7 @@ body a:hover { color: #a000ff; }
 body span, body input[type=submit] { -webkit-transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; -moz-transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; -o-transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; transition: background-color 0.15s ease, opacity 0.15s ease, color 0.15s ease; }
 body img { -webkit-transition: opacity 0.15s ease; -moz-transition: opacity 0.15s ease; -o-transition: opacity 0.15s ease; transition: opacity 0.15s ease; }
 
-.hide-text, .hover { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+.hide-text { text-indent: 100%; white-space: nowrap; overflow: hidden; }
 
 .uppercase { text-transform: uppercase; }
 
