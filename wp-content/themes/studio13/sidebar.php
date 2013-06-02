@@ -1,13 +1,14 @@
 <div id="sidebar1" class="sidebar small-4 columns" role="complementary">
         <div class="lineup">
             <a href="/artister/" class="hover artists" title="Artister"><span></span></a>
+            <?php 
+                $query = new WP_Query( array ( 'post_type' => 'artist', 'tag' => 'headliner' ) );
+                if( !$query->have_posts() ) { ?>
+                    <small>Artistene vil snart bli lansert.</small>
+                <?php } ?>
             <ul class="artists headliners">
                 <?php
                 /* Print our custom post type */
-                $query = new WP_Query( array ( 'post_type' => 'artist', 'tag' => 'headliner' ) );
-                if( !$query->have_posts() ) { ?>
-                Artister vil snart bli lansert.
-                <?php }
                 while ( $query->have_posts() ):
                     $query->the_post();
                     echo '<li><a href="'.get_permalink().'">' . get_the_title() . '</a></li>';
