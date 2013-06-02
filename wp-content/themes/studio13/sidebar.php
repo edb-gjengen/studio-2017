@@ -4,7 +4,7 @@
             <?php 
                 $query = new WP_Query( array ( 'post_type' => 'artist', 'tag' => 'headliner' ) );
                 if( !$query->have_posts() ) { ?>
-                    <small>Artistene vil snart bli lansert.</small>
+                    Artistene vil snart bli lansert.
                 <?php } ?>
             <ul class="artists headliners">
                 <?php
