@@ -7,6 +7,7 @@ Template Name: Artists page
 <div id="content" class="template-artists">
     <div id="inner-content" class="row">
         <div id="main" role="main" class="small-12 columns">
+            <?php while ( have_posts()) : the_post(); ?>
 
             <article id="post-<?php the_ID(); ?>" role="article">
                 <header class="article-header row">
@@ -28,6 +29,7 @@ $query = new WP_Query( array ( 'post_type' => 'artist', 'orderby' => 'title', 'o
                 <footer class="article-footer">
                 </footer> <!-- end article footer -->
             </article> <!-- end article -->
+            <?php endwhile; ?>
         </div> <!-- end #main -->
     </div> <!-- end #inner-content -->
 </div> <!-- end #content -->
