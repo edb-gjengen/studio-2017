@@ -5,6 +5,9 @@
                 <?php
                 /* Print our custom post type */
                 $query = new WP_Query( array ( 'post_type' => 'artist', 'tag' => 'headliner' ) );
+                if( !$query->have_posts() ) { ?>
+                Artister vil snart bli lansert.
+                <?php }
                 while ( $query->have_posts() ):
                     $query->the_post();
                     echo '<li><a href="'.get_permalink().'">' . get_the_title() . '</a></li>';

@@ -6,7 +6,7 @@
         <div class="small-6 columns">
             <header class="article-header">
                     <h4><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h4>
-                    <!--<p class="byline vcard"><time class="updated" datetime="<?php echo get_the_time('Y-m-j'); ?>" pubdate><?php echo get_the_time(get_option('date_format'));?></time> av <span class="author"><?php the_author_posts_link(); ?></span></p>-->
+                    <p class="byline vcard"><time class="updated" datetime="<?php echo get_the_time('Y-m-j'); ?>" pubdate><?php echo get_the_time(get_option('date_format'));?></time> av <span class="author"><?php the_author(); ?></span></p>
             </header> <!-- end article header -->
             <section class="entry-content">
                 <?php the_excerpt(); ?>

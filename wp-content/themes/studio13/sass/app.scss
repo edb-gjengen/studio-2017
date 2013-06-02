@@ -145,6 +145,12 @@ body {
 .attachment-four-columns {
     width: 100%;
 }
+.vcard {
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+}
 /* Image hovers */
 /* Note: Disabled automatic generation of :hover for fade transition */
 $disable-magic-sprite-selectors:true;
@@ -338,6 +344,18 @@ article {
             &:hover { color: $primary-color; }
         }
     }
+    .byline {
+        color: #999;
+        font-size: emCalc(12px);
+        margin-bottom: 0.5em;
+        a {
+            color: lighten($primary-color, 15%);
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+    }
     .entry-content {
         font-size: 0.9em;
     }
@@ -345,6 +363,16 @@ article {
     .article-footer {
         text-align: right;
     }
+}
+
+.search article .article-header h4,
+.search article .article-header h1,
+.post-type-archive article .article-header h4,
+.post-type-archive article .article-header h1,
+.home article .article-header h4,
+.home article .article-header h1 {
+    line-height: 1.1;
+    margin-bottom: 0;
 }
 .moretag {
     font-weight: bold;

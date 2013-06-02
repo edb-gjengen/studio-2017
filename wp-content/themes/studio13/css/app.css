@@ -601,6 +601,8 @@ body .secondary:hover, body .button:hover { color: white; background-color: #007
 /* Images */
 .attachment-eight-columns, .attachment-four-columns { width: 100%; }
 
+.vcard { padding: 0; margin: 0; border: 0; }
+
 /* Image hovers */
 /* Note: Disabled automatic generation of :hover for fade transition */
 .hover { position: relative; }
@@ -664,8 +666,13 @@ article .article-header h1 a { color: #ff8200; background-color: white; }
 article .article-header h1 a:hover { color: #007aff; }
 article .article-header h4 a { color: #ff8200; background-color: white; }
 article .article-header h4 a:hover { color: #007aff; }
+article .byline { color: #999; font-size: 0.75em; margin-bottom: 0.5em; }
+article .byline a { color: #4da2ff; }
+article .byline a:hover { color: #007aff; }
 article .entry-content { font-size: 0.9em; }
 article .article-footer { text-align: right; }
+
+.search article .article-header h4, .search article .article-header h1, .post-type-archive article .article-header h4, .post-type-archive article .article-header h1, .home article .article-header h4, .home article .article-header h1 { line-height: 1.1; margin-bottom: 0; }
 
 .moretag { font-weight: bold; }
 
