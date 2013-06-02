@@ -589,10 +589,12 @@ body img { -webkit-transition: opacity 0.15s ease; -moz-transition: opacity 0.15
 
 /* buttons */
 body .button { border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; text-transform: uppercase; }
+body .button.button-primary { border: 0; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; text-transform: uppercase; }
+body .button.mega { font-size: 2.3125em; }
 body .btn-tiny { text-align: center; font-size: 1.3em; display: inline-block; color: white; width: 32px; height: 32px; line-height: 32px; }
 body .btn-tiny .icon-twitter { font-size: 0.8em; }
-body .primary { background-color: #007aff; }
-body .primary:hover { color: white; background-color: #ff8200; }
+body .primary, body .button.button-primary { background-color: #007aff; }
+body .primary:hover, body .button.button-primary:hover { color: white; background-color: #ff8200; }
 body .secondary, body .button { background-color: #ff8200; }
 body .secondary:hover, body .button:hover { color: white; background-color: #007aff; }
 
@@ -617,7 +619,7 @@ body .secondary:hover, body .button:hover { color: white; background-color: #007
 
 /* more hover stuff */
 a.colored { display: block; background-color: #ff8200; }
-a.colored.primary { background-color: #007aff; }
+a.colored.primary, body a.colored.button.button-primary { background-color: #007aff; }
 a.colored img { display: block; width: 100%; }
 a.colored:hover img { opacity: .4; }
 
@@ -647,8 +649,8 @@ header.header .nav-menu a { background-color: #007aff; font-size: 1.5em; font-we
 header.header .nav-menu a:hover { z-index: 2; background-color: #ff8200; }
 
 .highlight a { height: 280px; line-height: 1.1; font-size: 2.5em; font-weight: bold; text-transform: uppercase; text-align: center; display: block; }
-.highlight a.primary { color: white; background-color: #ff8200; }
-.highlight a.primary:hover { color: white; background-color: #007aff; }
+.highlight a.primary, .highlight body a.button.button-primary, body .highlight a.button.button-primary { color: white; background-color: #ff8200; }
+.highlight a.primary:hover, .highlight body a.button.button-primary:hover, body .highlight a.button.button-primary:hover { color: white; background-color: #007aff; }
 .highlight a span { display: inline-block; padding-top: 30px; }
 .highlight a span.larger { padding-top: 62px; font-size: 1.6em; }
 .highlight a .number { font-size: 3em; }

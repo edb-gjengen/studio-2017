@@ -99,6 +99,15 @@ body {
         @extend .secondary;
         @include box-shadow(none);
         text-transform: uppercase;
+        &.button-primary {
+            border: 0;
+            @extend .primary;
+            @include box-shadow(none);
+            text-transform: uppercase;
+        }
+        &.mega {
+            font-size: $h2-font-size;
+        }
     }
     .btn-tiny {
         $size: 32px;
