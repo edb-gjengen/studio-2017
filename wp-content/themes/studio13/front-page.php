@@ -12,7 +12,7 @@
         <a href="/frivillig" class="hover fri-villig" title="Bli Frivillig"><span></span></a>
     </div>
     <div class="highlight small-4 columns">
-        <a href="/billetter" class="primary"><span class="larger">Kjøp billett</span></a>
+        <a href="/program" class="primary"><span class="larger">Hvem spiller?</span></a>
     </div>
 </div>
 <div class="row">

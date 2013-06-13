@@ -654,7 +654,7 @@ header.header .nav-menu a:hover { z-index: 2; background-color: #ff8200; }
 .highlight a.primary, .highlight body a.button.button-primary, body .highlight a.button.button-primary { color: white; background-color: #ff8200; }
 .highlight a.primary:hover, .highlight body a.button.button-primary:hover, body .highlight a.button.button-primary:hover { color: white; background-color: #007aff; }
 .highlight a span { display: inline-block; padding-top: 30px; }
-.highlight a span.larger { padding-top: 62px; font-size: 1.6em; }
+.highlight a span.larger { padding-top: 70px; font-size: 1.4em; }
 .highlight a .number { font-size: 3em; }
 
 .separator { height: 2px; background-color: #ff8200; margin: 2em 0; }
@@ -672,7 +672,7 @@ article .byline a:hover { color: #007aff; }
 article .entry-content { font-size: 0.9em; }
 article .article-footer { text-align: right; }
 
-.search article .article-header h4, .search article .article-header h1, .post-type-archive article .article-header h4, .post-type-archive article .article-header h1, .home article .article-header h4, .home article .article-header h1 { line-height: 1.1; margin-bottom: 0; }
+h4.no-margin, .home article .article-header h1 { line-height: 1.1; margin-bottom: 0; }
 
 .moretag { font-weight: bold; }
 

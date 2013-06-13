@@ -304,8 +304,8 @@ header.header {
             display: inline-block;
             padding-top: 30px;
             &.larger {
-                padding-top: 62px;
-                font-size: 1.6em;
+                padding-top: 70px;
+                font-size: 1.4em;
             }
         }
         .number {
@@ -365,11 +365,7 @@ article {
     }
 }
 
-.search article .article-header h4,
-.search article .article-header h1,
-.post-type-archive article .article-header h4,
-.post-type-archive article .article-header h1,
-.home article .article-header h4,
+h4.no-margin,
 .home article .article-header h1 {
     line-height: 1.1;
     margin-bottom: 0;

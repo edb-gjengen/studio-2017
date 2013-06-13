@@ -19,10 +19,18 @@ Template Name: Artists page
                         <?php the_content(); ?>
                         <ul class="artists headliners small-block-grid-4">
                             <?php
-                            /* Print our custom post type */
-$query = new WP_Query( array ( 'post_type' => 'artist', 'orderby' => 'title', 'order' => 'asc') );
+                            /* Print our artists */
+                            $query = new WP_Query( array(
+                                'post_type' => 'artist',
+                                'orderby' => 'title',
+                                'order' => 'asc') );
                             while ( $query->have_posts() ):
-                                $query->the_post(); ?><li class="artist-box"><a href="<?php the_permalink();?>" class="colored primary"><?php the_post_thumbnail('artist-thumb');?><span><?php the_title(); ?></span></a></li><?php endwhile;
+                                $query->the_post(); 
+                                $artist_thumb = get_the_post_thumbnail($post->ID, 'artist-thumb');
+                                if($artist_thumb == "") {
+                                    $artist_thumb = '<img src="http://placehold.it/228x191" />';
+                                }
+                                ?><li class="artist-box"><a href="<?php the_permalink();?>" class="colored primary"><?php echo $artist_thumb;?><span><?php the_title(); ?></span></a></li><?php endwhile;
                             wp_reset_postdata();?>
                         </ul>
                 </section> <!-- end article section -->
