@@ -641,7 +641,7 @@ a.colored:hover img { opacity: .4; }
 .disco { color: white; background-color: #007aff; -webkit-animation: disco 0.5s infinite alternate; -moz-animation: disco 0.5s infinite alternate; -o-animation: disco 0.5s infinite alternate; animation: disco 0.5s infinite alternate; }
 .disco.reversed { -webkit-animation: disco 0.5s 0.5s infinite alternate; -moz-animation: disco 0.5s 0.5s infinite alternate; -o-animation: disco 0.5s 0.5s infinite alternate; animation: disco 0.5s 0.5s infinite alternate; }
 
-header.header { margin-top: 2em; margin-bottom: 2em; }
+header.header { margin-top: 0.5em; margin-bottom: 2em; }
 header.header .date { color: #007aff; font-size: 3.4em; text-transform: uppercase; font-weight: 600; margin-bottom: 10px; display: inline-block; }
 header.header .logo img { position: relative; bottom: -15px; left: 10px; }
 header.header .logo img.multiply { position: absolute; left: 373px; bottom: -12px; z-index: 1; }
@@ -657,7 +657,7 @@ header.header .nav-menu a:hover { z-index: 2; background-color: #ff8200; }
 .highlight a span.larger { padding-top: 70px; font-size: 1.4em; }
 .highlight a .number { font-size: 3em; }
 
-.separator { height: 2px; background-color: #ff8200; margin: 2em 0; }
+.separator { height: 2px; background-color: #ff8200; margin-top: 1.8em; margin-bottom: 1em; }
 .separator.tiny-margin { margin-top: 0; margin-bottom: 0.4em; }
 
 article { margin-bottom: 1.5em; }

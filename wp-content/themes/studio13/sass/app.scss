@@ -235,7 +235,7 @@ a.colored {
 }
 
 header.header {
-    margin-top: 2em;
+    margin-top: 0.5em;
     margin-bottom: 2em;
 
     .date {
@@ -316,7 +316,8 @@ header.header {
 .separator {
     height: 2px;
     background-color: $secondary-color;
-    margin: 2em 0;
+    margin-top: 1.8em;
+    margin-bottom: 1em;
     &.tiny-margin {
         margin-top: 0;
         margin-bottom: 0.4em;
