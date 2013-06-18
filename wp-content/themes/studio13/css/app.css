@@ -715,9 +715,9 @@ h4.no-margin, .home article .article-header h1 { line-height: 1.1; margin-bottom
 
 /* Template styles */
 .template-artists img { display: block; }
-.template-artists .artists { font-size: 1.5em; text-transform: uppercase; text-align: center; font-weight: bold; }
-.template-artists .artists .artist-box a { color: #007aff; }
-.template-artists .artists .artist-box a span { display: block; color: white; background-color: #007aff; }
+.template-artists .artists { font-size: 1.3em; text-transform: uppercase; text-align: center; font-weight: bold; }
+.template-artists .artists .artist-box a { color: #007aff; position: relative; }
+.template-artists .artists .artist-box a span { display: block; color: white; background-color: #007aff; width: 100%; position: absolute; bottom: 0; }
 .template-artists .artists .artist-box a:hover { color: white; }
 .template-artists .artists .artist-box a:hover span { color: white; background-color: #ff8200; }
 

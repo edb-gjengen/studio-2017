@@ -4,7 +4,7 @@ Template Name: Events page
 */
 ?>
 <?php get_header(); ?>
-<div id="content" class="template-artists">
+<div id="content" class="template-artists events">
     <div id="inner-content" class="row">
         <div id="main" role="main" class="small-12 columns">
             <?php while ( have_posts()) : the_post(); ?>
