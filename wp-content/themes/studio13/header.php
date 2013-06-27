@@ -21,8 +21,8 @@
             <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
         <![endif]-->
         <!-- or, set /favicon.ico for IE10 win -->
-        <meta name="msapplication-TileColor" content="#f01d4f">
-        <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
+        <meta name="msapplication-TileColor" content="#ff8200">
+        <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/screenshot.png">
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
         <!-- Stylesheets -->
         <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>

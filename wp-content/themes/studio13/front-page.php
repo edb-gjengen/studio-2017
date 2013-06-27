@@ -45,7 +45,7 @@
 
                     </div>
                     <div class="bluebordered text-center small-6 columns">
-                        <a href="/blogg" class="hover blog" title="Blogg"><span></span></a>
+                        
                     </div>
                 </div>
                 <div class="row">
