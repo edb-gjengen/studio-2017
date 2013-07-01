@@ -60,6 +60,7 @@ Template Name: blimed
   global $wpdb;
   $table_name = $wpdb->prefix . 'studio_blimed_table';
   $backspinn = '';
+  $return = '';
 
   if (isset($_POST['save'])) {
 
@@ -80,13 +81,13 @@ Template Name: blimed
 				   );
       
       if ($settinnidb) {
-	echo '<div id="blimed_tilbake_ok"><p>Du er nå registrert</p></div>';
+	$return .= '<div id="blimed_tilbake_ok"><p>Du er nå registrert</p></div>';
 	
-      } else echo '<div id="blimed_tilbake_fail"><p>Beklager teknisk feil, sjekk verdiene og prøv på nytt</p></div>';
-    } else echo '<div id="blimed_tilbake_fail"><p>Du må oppgi navn, epost, tlf og et arbeidsområde</p></div>';    
+      } else $return .= '<div id="blimed_tilbake_fail"><p>Beklager teknisk feil, sjekk verdiene og prøv på nytt</p></div>';
+    } else $return .= '<div id="blimed_tilbake_fail"><p>Du må oppgi navn, epost, tlf og et arbeidsområde</p></div>';    
 
   } 
-  echo '    <div id="studioform">
+  $return .= '    <div id="studioform">
    <form id="funk_data_form" method="post" action="">
 		<input type="text" onclick="this.value=\'\';" name="funk_name" id="funk_name" value="Navn" title="Navn" />
 		<input type="text" onclick="this.value=\'\';" name="funk_mail" id="funk_mail" value="Mail" title="Mail" />
@@ -107,6 +108,7 @@ Template Name: blimed
 		</div>
 		<input id="saveForm" class="submitButton" type="submit" name="save" value="Send" />
 		</form></div>';
+  return $return;
 }
 
 add_shortcode('blimed_form', 'blimed_form');
