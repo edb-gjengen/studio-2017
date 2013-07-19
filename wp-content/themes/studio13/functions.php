@@ -135,10 +135,58 @@ function studio_events_post_type() {
 		'has_archive'         => true,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
+		'capability'          => 'page',
+		'capabilities' => array(
+					'read_post' => 'read_event',
+					'read_private_posts' => 'read_private_events',
+					'publish_posts' => 'publish_events',
+					'edit_post' => 'edit_event',
+					'edit_posts' => 'edit_events',
+					'edit_published_posts' => 'edit_published_events',
+					'edit_private_posts' => 'edit_private_events',
+					'edit_others_posts' => 'edit_others_events',
+					'delete_post' => 'delete_event',
+					'delete_posts' => 'delete_events',
+					'delete_others_posts' => 'delete_others_events',
+					'delete_published_posts' => 'delete_published_events',
+					'delete_private_posts' => 'delete_private_events',
+					),
+		'map_meta_cap'        => true,
 	);
 
 	register_post_type( 'event', $args );
+	
+	
+	add_role('event_user', 'Arrangør', array( 'read' => true,
+						  //'read_event' => true,
+						  'edit_events' => true, 
+						  'edit_event' => true, 
+						  'edit_published_events' => true, 
+						  'publish_events' => true, 
+						  'delete_events' => true, 
+						  'delete_published_events' => true, 
+						  'upload_files' => true
+						  ));
+	
+	//remove_role('event_user');
+	$role = get_role('administrator');
+
+	$role->add_cap('read_event'); 
+	$role->add_cap('read_private_events');
+
+	$role->add_cap('publish_events'); 
+
+	$role->add_cap('edit_event'); 
+	$role->add_cap('edit_events'); 
+	$role->add_cap('edit_published_events'); 
+	$role->add_cap('edit_private_events'); 
+	$role->add_cap('edit_others_events'); 
+
+	$role->add_cap('delete_event'); 	
+	$role->add_cap('delete_events'); 	
+	$role->add_cap('delete_others_events');	
+	$role->add_cap('delete_published_events');	
+	$role->add_cap('delete_private_events');	
 }
 
 // Hook into the 'init' action

@@ -55,14 +55,14 @@ function blimed_form( ) {
 /*
 Template Name: blimed
 */
-
-
+    
   global $wpdb;
   $table_name = $wpdb->prefix . 'studio_blimed_table';
   $backspinn = '';
   $return = '';
-
+  
   if (isset($_POST['save'])) {
+    require_once("Mail.php");
 
     // Some values should allways be there
     if ($_POST['funk_name']  != 'Navn' && 
@@ -83,9 +83,38 @@ Template Name: blimed
       if ($settinnidb) {
 	$return .= '<div id="blimed_tilbake_ok"><p>Du er nå registrert</p></div>';
 	
+	$to = $_POST['funk_mail'];
+	$from = 'frivillig.studio@studentersamfundet.no';
+	$sub = "Velkommen som frivillig i STUDiO 2013!";
+	$content = "Hei " . $_POST['funk_name'] . "!
+
+Takk for at du meldte deg som frivillig i " . $_POST['funk_valg'] . ". Vi er utrolig glade for å ha deg med på laget og vil kontakte deg etter hvert som vi setter opp lister. Hvis det er noe du lurer på, eller om du også vil jobbe andre steder enn " . $_POST['funk_valg'] . " kan du sende en mail til studio-crewledere@studentersamfundet.no.";
+	
+	$host = "mail.studentersamfundet.no";
+	$username = "frivillig.studio@studentersamfundet.no";
+	$password = '0StePOP';
+ 
+	$headers = array (  'From' => 'Studiofestivalen <frivillig.studio@studentersamfundet.no>',
+			    'To' => $_POST['funk_mail'],
+			    'Subject' => $sub,
+			    'Date' => date("r"),
+			    'Content-Type' => "text/plain; charset=utf-8");
+	
+	$smtp = Mail::factory(  'smtp',
+				array ( 'host' => $host,
+					'port' => "26",
+					'auth' => true,
+					'username' => $username,
+					'password' => $password));
+
+
+	
+
+	$mail = $smtp->send($to, $headers, $content);
+		
       } else $return .= '<div id="blimed_tilbake_fail"><p>Beklager teknisk feil, sjekk verdiene og prøv på nytt</p></div>';
     } else $return .= '<div id="blimed_tilbake_fail"><p>Du må oppgi navn, epost, tlf og et arbeidsområde</p></div>';    
-
+    
   } 
   $return .= '    <div id="studioform">
    <form id="funk_data_form" method="post" action="">
@@ -109,19 +138,19 @@ Template Name: blimed
 		<input id="saveForm" class="submitButton" type="submit" name="save" value="Send" />
 		</form></div>';
   return $return;
-}
+  }
 
-add_shortcode('blimed_form', 'blimed_form');
+  add_shortcode('blimed_form', 'blimed_form');
 
-function blimed_admin_content($param){
-
+  function blimed_admin_content($param){
+  
     global $wpdb;
-        
-    $show_query = "SELECT * FROM ".$wpdb->prefix."studio_blimed_table";
-
-    if ($param == 'all') {
-        echo "Søket som er utført er: " . $show_query . "<br /><br />";
-        $funks = $wpdb->get_results($show_query);
+  
+  $show_query = "SELECT * FROM ".$wpdb->prefix."studio_blimed_table";
+  
+  if ($param == 'all') {
+    echo "Søket som er utført er: " . $show_query . "<br /><br />";
+    $funks = $wpdb->get_results($show_query);
         blimed_print_table($funks);
     } else {
       echo "Søket som er utført er: " . $show_query . " WHERE valg = '" . $param . "'<br /><br />";
