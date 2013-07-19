@@ -105,7 +105,7 @@ Takk for at du meldte deg som frivillig i " . $_POST['funk_valg'] . ". Vi er utr
 					'port' => "26",
 					'auth' => true,
 					'username' => $username,
-					'password' => $password));
+					'password' => MAIL_PASS));
 
 
 	
