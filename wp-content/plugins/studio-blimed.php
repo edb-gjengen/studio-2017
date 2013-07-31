@@ -153,24 +153,24 @@ Hilsen din bror, Sjur";
 		<input id="saveForm" class="submitButton" type="submit" name="save" value="Send" />
 		</form></div>';
   return $return;
-  }
+}
 
-  add_shortcode('blimed_form', 'blimed_form');
+add_shortcode('blimed_form', 'blimed_form');
 
-  function blimed_admin_content($param){
+function blimed_admin_content($param){
   
-    global $wpdb;
+  global $wpdb;
   
   $show_query = "SELECT * FROM ".$wpdb->prefix."studio_blimed_table";
   
   if ($param == 'all') {
     echo "Søket som er utført er: " . $show_query . "<br /><br />";
     $funks = $wpdb->get_results($show_query);
-        blimed_print_table($funks);
-    } else {
-      echo "Søket som er utført er: " . $show_query . " WHERE valg = '" . $param . "'<br /><br />";
-      $funks = $wpdb->get_results($show_query." WHERE valg = '".$param."'");
-      blimed_print_table($funks);
+    blimed_print_table($funks);
+  } else {
+    echo "Søket som er utført er: " . $show_query . " WHERE valg = '" . $param . "'<br /><br />";
+    $funks = $wpdb->get_results($show_query." WHERE valg = '".$param."'");
+    blimed_print_table($funks);
     }
 }
 
@@ -183,6 +183,7 @@ function blimed_print_table( $funks ){
                 <th>Adresse&nbsp;&nbsp;</th>
                 <th>Studiested&nbsp;&nbsp;</th>
                 <th>Valg&nbsp;&nbsp;</th>
+                <th>Slett&nbsp;&nbsp;</th>
             </tr>
         ";
         foreach ($funks as $funk) {
@@ -193,6 +194,7 @@ function blimed_print_table( $funks ){
                     <td>$funk->adresse&nbsp;&nbsp;</td>
                     <td>$funk->studsted&nbsp;&nbsp;</td>
                     <td>$funk->valg&nbsp;&nbsp;</td>
+                    <td><form method='post' action=''><input id='deleteForm' class='submitButton' style='float:right;' type='submit' name='delete' value='$funk->id' /></form>&nbsp;&nbsp;</td>
                   </tr>" ;
         }
         echo "</table><br /><br />";
@@ -200,7 +202,8 @@ function blimed_print_table( $funks ){
 
 
 function blimed_admin() {
-	echo '
+  global $wpdb;
+  echo '
 <div class="wrap">
     <h1>test</h1>
 
@@ -220,11 +223,14 @@ function blimed_admin() {
     </form>
     '; 
 
-    if($_POST['sort'])
-        blimed_admin_content($_POST['blimed_admin_sort']);
-    else
-        blimed_admin_content('all'); 
-    echo '
+  if(isset($_POST['delete']))
+    $wpdb->delete($wpdb->prefix."studio_blimed_table", array('id' => $_POST['delete']));
+  
+  if(isset($_POST['sort']))
+    blimed_admin_content($_POST['blimed_admin_sort']);
+  else
+    blimed_admin_content('all'); 
+  echo '
 </div>';
 }
 
