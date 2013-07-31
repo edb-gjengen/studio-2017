@@ -88,13 +88,28 @@ Template Name: blimed
 	$sub = "Velkommen som frivillig i STUDiO 2013!";
 	$content = "Hei " . $_POST['funk_name'] . "!
 
-Takk for at du meldte deg som frivillig i " . $_POST['funk_valg'] . ". Vi er utrolig glade for å ha deg med på laget og vil kontakte deg etter hvert som vi setter opp lister. Hvis det er noe du lurer på, eller om du også vil jobbe andre steder enn " . $_POST['funk_valg'] . " kan du sende en mail til studio-crewledere@studentersamfundet.no.";
+Takk for at du meldte deg som frivillig i " . $_POST['funk_valg'] . ". Vi er utrolig glade for å ha deg med på laget og vil kontakte deg etter hvert som vi setter opp lister. Hvis det er noe du lurer på, eller om du også vil jobbe andre steder enn " . $_POST['funk_valg'] . " kan du sende en mail til studio-crewledere@studentersamfundet.no.
+
+Vi skal ha en frivilligfest for alle frivillige på forhånd slik at du kan bli kjent med oss i styret og andre du vil jobbe med, bli med da! https://www.facebook.com/events/177080415807876";
+
+	if (strtolower($_POST['funk_name']) == "guro hernes")
+	  $content = "Hei lillesøstra mi!
+
+Utrolig trivelig at du gidder å henge med brodern din og jobbe med han på festivalen, du er så utrolig trivelig at rumpetaske dekker kun en brøkdel av det.
+
+Hvis det er noe du lurer på kan du jo sende en mail til Nicolai på studio-crewledere@studentersamfundet.no, eller bare spørre meg på face.
+
+Og om du skulle klare å dra deg opp til byen før helga så synes jeg at du skal bli med på internfesten vår, vi tenkte å samle en del av de som skal jobbe og bli litt bedre kjent før alt begynner og alt er kaos. Tror det blir bra, så bli med! 
+https://www.facebook.com/events/177080415807876
+
+Hils resten av familien fra meg da!
+
+Hilsen din bror, Sjur";
 	
 	$host = "mail.studentersamfundet.no";
 	$username = "frivillig.studio@studentersamfundet.no";
-	$password = '0StePOP';
  
-	$headers = array (  'From' => 'Studiofestivalen <frivillig.studio@studentersamfundet.no>',
+	$headers = array (  'From' => 'STUDiO <frivillig.studio@studentersamfundet.no>',
 			    'To' => $_POST['funk_mail'],
 			    'Subject' => $sub,
 			    'Date' => date("r"),
