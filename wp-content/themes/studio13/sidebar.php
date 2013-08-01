@@ -1,6 +1,5 @@
 <div id="sidebar1" class="sidebar small-4 columns" role="complementary">
         <div class="lineup">
-            <a href="/artister/" class="hover artists" title="Artister"><span></span></a>
             <?php 
                 $query = new WP_Query( array ( 'post_type' => 'artist', 'tag' => 'headliner' ) );
                 if( !$query->have_posts() ) { ?>
