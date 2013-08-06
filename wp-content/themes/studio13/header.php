@@ -52,6 +52,8 @@
         <!-- end analytics -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 
+        <meta name="google-translate-customization" content="3f8fbdcd9579ee21-9b10dc071d1c34fb-gc1780610dd881b80-18"></meta>
+
     </head>
 
 	<body <?php body_class(); ?>>
