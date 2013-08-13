@@ -1,12 +1,17 @@
 <?php get_header(); ?>
 <div id="featured" class="row">
     <div class="highlight small-4 columns">
-    <a href="/info" class="primary"><span><div class="number"><?php
+    <a href="/info" class="primary"><span><?php
         $now = time();
         $your_date = strtotime("2013-08-12");
         $datediff = $your_date - $now;
-        echo floor($datediff/(60*60*24));
-    ?></div>dager igjen</span></a>
+        $days = floor($datediff/(60*60*24));
+        if($days <= 0) {
+            echo '<div class="larger started">STUDiO har startet!</div>';
+        } else {
+            echo '<div class="number">'.$days.'</div> dager igjen';
+        }
+    ?></span></a>
     </div>
     <div class="highlight small-4 columns text-center">
         <a href="/frivillig" class="hover fri-villig" title="Bli Frivillig"><span></span></a>
