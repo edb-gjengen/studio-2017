@@ -710,7 +710,7 @@ h4.no-margin, .home article .article-header h1 { line-height: 1.1; margin-bottom
 .social-media .icon-twitter { margin-left: 0.25em; }
 .social-media .follow { position: relative; font-size: 0.85em; top: -8px; }
 
-.sidebar .lineup ul.artists { padding-left: 0; margin-left: 16px; margin-bottom: 10px; list-style-type: none; text-transform: uppercase; font-size: 1.2em; font-weight: bold; line-height: 1.2; white-space: nowrap; }
+.sidebar .lineup ul.artists { padding-left: 0; margin-left: 16px; margin-bottom: 10px; list-style-type: none; text-transform: uppercase; font-size: 1.2em; font-weight: bold; line-height: 1.2; }
 .sidebar .lineup ul.artists a { color: #007aff; }
 .sidebar .lineup ul.artists a:hover { color: white; background-color: #ff8200; }
 .sidebar .lineup ul.artists.headliners { margin-top: 10px; font-size: 2em; }
